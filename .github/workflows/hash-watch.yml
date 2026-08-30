@@ -1,61 +1,59 @@
 name: hash-watch
 
-# Replaces version-watch.yml as of v1.0.0's source change: this repo no
-# longer generates from the hashicorp/digitalocean Terraform provider, so
-# polling the Terraform Registry for a hashicorp/digitalocean version bump
-# would watch the wrong thing entirely. The real source since 1.0.0 is
-# DigitalOcean' own OpenAPI/Swagger API description, pinned to the
-# release-1.37 branch -- a real, live branch, not a tag, with no
-# discrete pinnable release the way a tag would give. Instead: re-fetch
-# the same URL, hash it, and compare against VERSION's committed
-# spec-sha256. On a hash change: bumps VERSION, re-runs
-# `ubx sdk gen --lang go|ts|py --out .` against it (all three languages,
-# one PR), and opens a PR with the combined diff for review. Never
-# auto-merges, same as every other repo in this org.
+# UBI-222: this file was hand-copied from another provider repo's own
+# hash-watch.yml at onboarding time and never actually adapted to
+# DigitalOcean's own real source -- confirmed live: it watched
+# raw.githubusercontent.com/digitalocean/digitalocean/release-1.37/...,
+# an org-name-doubled-as-repo-name URL on a "release-1.37" branch that
+# does not exist, built from Kubernetes' own real branch-per-minor-
+# version convention, not DigitalOcean's. If this workflow had ever
+# run on its own weekly schedule, it would have failed to fetch
+# anything (a real 404) rather than silently watching nothing -- still
+# a real, live gap: nothing had actually caught this yet, since it had
+# never fired.
 #
-# 1.1.0: switched from raw-byte hashing to the same canonicalized-content
-# hashing used by ubx-sdk-datadog/-github/-azure/-google, so all six repos
-# in this org watch drift the same way. This repo and ubx-sdk-aws were
-# built alongside the original four but never actually converted to this
-# method -- both still hashed raw fetched bytes directly, found only when
-# asked to confirm all six matched. DigitalOcean' own swagger.json is a
-# single static document (closer to GitHub's own shape than a multi-member
-# group), so this reuses GitHub's single-document canonicalize() rather
-# than the multi-member merge logic Datadog/Azure/Google need. Confirmed
-# live this session that re-serializing changes the byte representation
-# even though this document's raw bytes were already stable and already
-# matched the prior committed hash -- so this VERSION's spec-sha256 value
-# moves here even though the underlying spec content has not.
+# DigitalOcean is a genuinely from-scratch provider in this org -- no
+# prior Terraform-sourced predecessor, no version-watch.yml this file
+# ever replaced. Its real source is DigitalOcean's own public OpenAPI
+# repo (github.com/digitalocean/openapi), specification/DigitalOcean-
+# public.v2.yaml on that repo's own main branch -- a real, live branch,
+# not a tag, with no discrete pinnable release the way a tag would
+# give (the same real shape a "release-N" branch would have, just not
+# Kubernetes' own specific convention). This is also the one provider
+# in this org whose real spec needs Redocly's own bundler first
+# (`npx @redocly/cli bundle`, ubx-provider-dynamic's own redocly_bundle
+# mechanism, UBI-217) -- confirmed live, DigitalOcean's own spec uses
+# two Redocly-only $ref conventions kin-openapi cannot follow
+# unbundled. Hashing the raw, unbundled document (what this file used
+# to do, on top of watching the wrong URL entirely) would not even be
+# equivalent to what real generation actually parses -- the hash step
+# below bundles first, via the identical real command real generation
+# uses, so a hash change here means the same content change a real
+# `ubx sdk gen` run would see.
 #
-# Also carries the other two real, found-live fixes already applied to
-# the other four repos this session:
+# On a hash change: bumps VERSION, re-runs `ubx sdk gen --lang go|ts|py
+# --out .` against the live source (all three languages, one PR), and
+# opens a PR with the combined diff for review. Never auto-merges, same
+# as every other repo in this org.
 #
-# 1. UBIQUEX_SOURCE_TOKEN removed. ubiquex and ubx-provider-dynamic are
-#    now public repos -- a plain, unauthenticated clone needs no token.
-#    (Formerly a fine-grained PAT; that secret was never actually set on
-#    this repo, confirmed directly via the API, so this checkout always
-#    failed here regardless of whether a real change was ever found.)
+# Canonicalized-content hashing (sort_keys, compact separators, ISO
+# dates) matches every other repo's own real convention, so all seven
+# providers in this org watch drift the same way -- ported from
+# ubx-sdk-kubernetes's own hash-watch.yml (its own real, working
+# single-document reference; DigitalOcean's own bundled spec is a
+# single document too, the same shape, not the multi-member merge logic
+# Datadog/Azure/Google need), NOT ubx-sdk-aws's (a real, live error in
+# the ORIGINAL version of this file's own doc comment -- AWS's real
+# source is a CloudFormation registry zip, a structurally different
+# mechanism this file's own real logic was never actually built from).
 #
-# 2. --recurse-submodules added to the ubiquex clone. ubiquex's own
-#    sdk/go, sdk/py, sdk/ts are real git submodules (its own Makefile
-#    runs `git submodule update --init --recursive` before every build);
-#    a bare clone leaves them empty and `go build ./cmd/ubx` below fails
-#    ("no required module provides package .../sdk/py"). Applied here
-#    even though this repo's own regen path has never actually run yet
-#    (this repo's compare step has always found the corpus unchanged in
-#    every real test so far) -- the dependency is identical to the other
-#    repos where this was caught live.
-#
-# Ported from ubx-sdk-aws's own hash-watch.yml (the real, working
-# reference for this content-hash-based pattern on a dynamic provider
-# with no discrete pinnable release). release-1.37 is a real, live
-# DigitalOcean branch, not a tag, so its content can still drift between
-# now and DigitalOcean' next minor release -- this workflow only detects
-# that drift; moving to a newer release-1.NN branch is a separate,
-# manual edit to [dynamic_providers.digitalocean]'s own schema_url in
-# ubiquex. Same ubx-provider-dynamic checkout requirement as every
-# dynamic-provider entry (cli/dynamicprovider.go's
-# UBX_PROVIDER_DYNAMIC_REPO convention).
+# UBIQUEX_SOURCE_TOKEN is not needed -- ubiquex and ubx-provider-dynamic
+# are public repos, a plain unauthenticated clone works. --recurse-
+# submodules is required on the ubiquex clone (its own sdk/go, sdk/py,
+# sdk/ts are real git submodules; a bare clone leaves them empty and
+# `go build ./cmd/ubx` fails). Same ubx-provider-dynamic checkout
+# requirement as every dynamic-provider entry (cli/dynamicprovider.go's
+# own UBX_PROVIDER_DYNAMIC_REPO convention).
 
 on:
   schedule:
@@ -78,59 +76,44 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Set up PyYAML
-        run: pip install --quiet pyyaml
-
-      - name: Fetch the real DigitalOcean OpenAPI/Swagger spec and compute its canonicalized-content spec-sha256
+      - name: Bundle the real DigitalOcean OpenAPI spec via Redocly and compute its canonicalized-content spec-sha256
         id: spec
         run: |
           set -euo pipefail
-          python3 - <<'PYEOF'
-          import hashlib, json, os, time, urllib.error, urllib.request, yaml, datetime
+          SOURCE_URL="https://raw.githubusercontent.com/digitalocean/openapi/main/specification/DigitalOcean-public.v2.yaml"
+          bundled="${{ runner.temp }}/digitalocean-bundled.json"
 
-          URL = "https://raw.githubusercontent.com/digitalocean/digitalocean/release-1.37/api/openapi-spec/swagger.json"
+          # DigitalOcean's real spec uses two Redocly-only $ref conventions
+          # kin-openapi (this org's own real generator) cannot follow
+          # unbundled -- bundle here via the identical real command the
+          # regen step's own redocly_bundle mechanism below uses, so this
+          # hash reflects what generation actually parses, not just the
+          # entry document's own raw bytes (which would miss drift in any
+          # $ref'd file elsewhere in the spec).
+          npx --yes @redocly/cli bundle "$SOURCE_URL" --output "$bundled" --ext json
 
-          def fetch(url, retries=5):
-              # Same Retry-After-aware backoff as every other repo's own
-              # fetch() this session, kept here for consistency even
-              # though a single-document fetch is lower 429 risk than the
-              # multi-member loops that first surfaced this bug.
-              req = urllib.request.Request(url, headers={"User-Agent": "ubx-hash-watch"})
-              for i in range(retries):
-                  try:
-                      with urllib.request.urlopen(req, timeout=30) as resp:
-                          return resp.read()
-                  except urllib.error.HTTPError as e:
-                      if i == retries - 1:
-                          raise
-                      retry_after = e.headers.get("Retry-After") if e.code == 429 else None
-                      time.sleep(float(retry_after) if retry_after else 5 * (2 ** i))
-                  except Exception:
-                      if i == retries - 1:
-                          raise
-                      time.sleep(5 * (2 ** i))
+          python3 - <<PYEOF
+          import hashlib, json, os, datetime
 
           def json_default(o):
               if isinstance(o, (datetime.date, datetime.datetime)):
                   return o.isoformat()
               raise TypeError(f"not JSON serializable: {o!r}")
 
-          def canonicalize(raw_bytes):
-              text = raw_bytes.decode("utf-8")
-              try:
-                  doc = json.loads(text)
-              except json.JSONDecodeError:
-                  doc = yaml.safe_load(text)
+          def canonicalize(doc):
               # Same revision-key strip as every other repo's own
               # canonicalize() this session -- a real no-op here (checked
               # directly: this document has no top-level "revision" key),
-              # kept only so all six repos run identical logic.
+              # kept only so all seven repos run identical logic.
               if isinstance(doc, dict) and "revision" in doc:
                   doc = {k: v for k, v in doc.items() if k != "revision"}
               return json.dumps(doc, sort_keys=True, separators=(",", ":"), default=json_default).encode("utf-8")
 
+          with open("$bundled") as f:
+              doc = json.load(f)
+
           h = hashlib.sha256()
-          h.update(canonicalize(fetch(URL)))
+          h.update(canonicalize(doc))
 
           with open(os.environ["GITHUB_OUTPUT"], "a") as out:
               out.write(f"hash={h.hexdigest()}\n")
@@ -194,8 +177,9 @@ jobs:
           cat > "$gendir/.ubx/config" <<EOF
           [dynamic_providers.digitalocean]
           schema_source = "openapi"
-          schema_url = "https://raw.githubusercontent.com/digitalocean/digitalocean/release-1.37/api/openapi-spec/swagger.json"
-          base_url = "https://digitalocean.example.invalid"
+          schema_url = "https://raw.githubusercontent.com/digitalocean/openapi/main/specification/DigitalOcean-public.v2.yaml"
+          base_url = "https://api.digitalocean.com"
+          redocly_bundle = true
           EOF
 
           # Each language's own semver `version` field is owned by
@@ -247,7 +231,8 @@ jobs:
           cat > VERSION <<EOF
           spec-sha256: ${{ steps.spec.outputs.hash }}
           fetched: $(date -u +%Y-%m-%d)
-          source: https://raw.githubusercontent.com/digitalocean/digitalocean/release-1.37/api/openapi-spec/swagger.json
+          source: https://github.com/digitalocean/openapi (specification/DigitalOcean-public.v2.yaml)
+          bundled-via: npx @redocly/cli bundle
           EOF
 
       - name: Refresh sdk/typescript/deno.json's exports map for the regenerated tree
@@ -355,7 +340,7 @@ jobs:
           git push origin "$branch" --force
           gh pr create \
             --title "sdk: regenerate from DigitalOcean OpenAPI spec $short" \
-            --body "Automated regeneration (\`.github/workflows/hash-watch.yml\`) triggered by a schema content change on DigitalOcean' live release-1.37 branch OpenAPI/Swagger description -- all three languages (sdk/go/, sdk/typescript/, sdk/python/) regenerated together in this one PR.
+            --body "Automated regeneration (\`.github/workflows/hash-watch.yml\`) triggered by a schema content change on DigitalOcean's own live main-branch OpenAPI description (github.com/digitalocean/openapi) -- all three languages (sdk/go/, sdk/typescript/, sdk/python/) regenerated together in this one PR.
 
           Previous spec-sha256: \`${{ steps.compare.outputs.current }}\`
           New spec-sha256: \`${{ steps.spec.outputs.hash }}\`
