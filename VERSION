@@ -1,0 +1,4 @@
+source: https://github.com/digitalocean/openapi (specification/DigitalOcean-public.v2.yaml)
+fetched: 2026-08-29
+bundled-via: npx @redocly/cli bundle (ubx-provider-dynamic's own redocly_bundle mechanism, UBI-217)
+pinned-release: https://github.com/Ubiquex/ubx-schema-digitalocean/releases/tag/v1.0.0
