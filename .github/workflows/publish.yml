@@ -302,30 +302,26 @@ jobs:
             --dump-ir "${{ runner.temp }}/schema-dump" \
             --out "${{ runner.temp }}/gen-unused" --lang go)
 
-      - name: Check out ubiquex-docs (sparse -- only this provider's own artifacts)
-        run: |
-          set -euo pipefail
-          git clone --depth=1 --filter=blob:none --sparse \
-            "https://github.com/Ubiquex/ubiquex-docs.git" \
-            "${{ runner.temp }}/ubiquex-docs-src"
-          git -C "${{ runner.temp }}/ubiquex-docs-src" sparse-checkout set artifacts/digitalocean
-
       - name: Package the docs artifact
+        # UBI-240 slice 6: artifacts/digitalocean/ now lives in this
+        # repo's own checkout (moved out of ubiquex-docs), so the
+        # descriptions/intros/categories files this step needs are
+        # already sitting in the working tree from this job's first
+        # checkout step -- no second clone. exclusions.json genuinely
+        # does not exist yet for digitalocean (confirmed directly, not
+        # every provider has one) -- ubx-docs-providers never reads this
+        # file today, so its absence is not a reason to fail a real
+        # release.
         run: |
           set -euo pipefail
           staging="${{ runner.temp }}/docs-artifact"
           mkdir -p "$staging/artifacts"
           cp -r "${{ runner.temp }}/schema-dump/digitalocean" "$staging/schema"
-          # exclusions.json genuinely does not exist yet for digitalocean
-          # in ubiquex-docs (confirmed directly, not every provider has
-          # one) -- ubx-docs-providers never reads this file today, so
-          # its absence is not a reason to fail a real release. Required
-          # for descriptions/intros/categories, which the site does read.
-          cp "${{ runner.temp }}/ubiquex-docs-src/artifacts/digitalocean/descriptions.json" \
-             "${{ runner.temp }}/ubiquex-docs-src/artifacts/digitalocean/intros.json" \
-             "${{ runner.temp }}/ubiquex-docs-src/artifacts/digitalocean/categories.json" \
+          cp "artifacts/digitalocean/descriptions.json" \
+             "artifacts/digitalocean/intros.json" \
+             "artifacts/digitalocean/categories.json" \
              "$staging/artifacts/"
-          cp "${{ runner.temp }}/ubiquex-docs-src/artifacts/digitalocean/exclusions.json" \
+          cp "artifacts/digitalocean/exclusions.json" \
              "$staging/artifacts/" 2>/dev/null || true
           r="$(find "$staging/schema" -maxdepth 1 -name '*.json' ! -name 'data_*' ! -name 'schema.json' ! -name 'PROVENANCE.json' | wc -l | tr -d ' ')"
           d="$(find "$staging/schema" -maxdepth 1 -name 'data_*.json' | wc -l | tr -d ' ')"
