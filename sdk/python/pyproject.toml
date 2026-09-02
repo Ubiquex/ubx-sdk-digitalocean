@@ -1,6 +1,6 @@
 [project]
 name = "ubx-sdk-digitalocean"
-version = "1.0.0"
+version = "1.0.1"
 description = "Generated Python bindings for digitalocean@dynamic (ubx sdk gen). DO NOT EDIT."
 dependencies = ["ubx_sdk>=0.2.0,<0.3.0"]
 

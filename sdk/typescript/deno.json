@@ -1,6 +1,6 @@
 {
   "name": "@ubx/sdk-digitalocean",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "Apache-2.0",
   "exports": {
     "./digitalocean/action/action": "./digitalocean/action/action.ts",
