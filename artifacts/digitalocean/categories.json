@@ -1,10 +1,64 @@
 {
  "overrides": {
+  "digitalocean_access_key": {
+   "label": "Functions"
+  },
+  "digitalocean_access_point_get_response": {
+   "label": "NFS"
+  },
+  "digitalocean_access_point_response": {
+   "label": "NFS"
+  },
+  "digitalocean_account": {
+   "label": "SSH Keys"
+  },
   "digitalocean_action": {
    "label": "Actions"
   },
+  "digitalocean_addons_app_info": {
+   "label": "Add-ons"
+  },
+  "digitalocean_addons_resource": {
+   "label": "Add-ons"
+  },
+  "digitalocean_affected_resource": {
+   "label": "Security"
+  },
   "digitalocean_alert": {
    "label": "Monitoring"
+  },
+  "digitalocean_api_agent": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_agent_apikey_info": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_agent_public": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_agent_version": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_anthropic_apikey_info": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_custom_model": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_evaluation_dataset": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_evaluation_metric": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_evaluation_run": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_evaluation_test_case": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_generate_oauth2_urloutput": {
+   "label": "Gradient AI Platform"
   },
   "digitalocean_api_get_agent_output": {
    "label": "Gradient AI Platform"
@@ -12,10 +66,22 @@
   "digitalocean_api_get_anthropic_apikey_output": {
    "label": "Gradient AI Platform"
   },
+  "digitalocean_api_get_custom_model_output_public": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_get_evaluation_dataset_download_urloutput": {
+   "label": "Gradient AI Platform"
+  },
   "digitalocean_api_get_evaluation_run_output": {
    "label": "Gradient AI Platform"
   },
+  "digitalocean_api_get_evaluation_run_prompt_results_output": {
+   "label": "Gradient AI Platform"
+  },
   "digitalocean_api_get_evaluation_test_case_output": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_get_indexing_job_details_signed_urloutput": {
    "label": "Gradient AI Platform"
   },
   "digitalocean_api_get_knowledge_base_indexing_job_output": {
@@ -24,7 +90,16 @@
   "digitalocean_api_get_knowledge_base_output": {
    "label": "Gradient AI Platform"
   },
+  "digitalocean_api_get_model_catalog_card_output": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_get_model_evaluation_preset_output": {
+   "label": "Gradient AI Platform"
+  },
   "digitalocean_api_get_model_evaluation_run_output": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_get_model_evaluation_run_results_download_urloutput": {
    "label": "Gradient AI Platform"
   },
   "digitalocean_api_get_model_router_output": {
@@ -33,10 +108,73 @@
   "digitalocean_api_get_open_aiapikey_output": {
    "label": "Gradient AI Platform"
   },
+  "digitalocean_api_get_scheduled_indexing_output": {
+   "label": "Gradient AI Platform"
+  },
   "digitalocean_api_get_workspace_output": {
    "label": "Gradient AI Platform"
   },
+  "digitalocean_api_indexed_data_source": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_indexing_job": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_knowledge_base": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_knowledge_base_data_source": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_list_model_catalog_output": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_list_model_evaluation_runs_output": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_model_apikey_info": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_model_evaluation_preset": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_model_public": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_model_router": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_model_router_preset": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_model_router_task_preset": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_open_aiapikey_info": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_prompt": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_api_workspace": {
+   "label": "Gradient AI Platform"
+  },
+  "digitalocean_app": {
+   "label": "Add-ons"
+  },
+  "digitalocean_app_alert": {
+   "label": "App Platform"
+  },
+  "digitalocean_app_health_response": {
+   "label": "App Platform"
+  },
+  "digitalocean_app_instance": {
+   "label": "App Platform"
+  },
   "digitalocean_app_job_invocation": {
+   "label": "App Platform"
+  },
+  "digitalocean_app_job_invocations": {
    "label": "App Platform"
   },
   "digitalocean_app_response": {
@@ -45,17 +183,56 @@
   "digitalocean_apps_deployment_response": {
    "label": "App Platform"
   },
+  "digitalocean_apps_deployments_response": {
+   "label": "App Platform"
+  },
+  "digitalocean_apps_get_exec_response": {
+   "label": "App Platform"
+  },
+  "digitalocean_apps_get_instance_size_response": {
+   "label": "App Platform"
+  },
+  "digitalocean_apps_get_logs_response": {
+   "label": "App Platform"
+  },
+  "digitalocean_apps_instance_size": {
+   "label": "App Platform"
+  },
+  "digitalocean_apps_response": {
+   "label": "App Platform"
+  },
+  "digitalocean_associated_kubernetes_resources": {
+   "label": "Kubernetes"
+  },
+  "digitalocean_associated_resource_status": {
+   "label": "Droplets"
+  },
   "digitalocean_attachment": {
    "label": "Partner Network Connect"
   },
   "digitalocean_autoscale": {
    "label": "Droplet Autoscale Pools"
   },
+  "digitalocean_backup": {
+   "label": "Databases"
+  },
+  "digitalocean_balance": {
+   "label": "Billing"
+  },
   "digitalocean_batch": {
    "label": "Batch Inference"
   },
+  "digitalocean_batch_results_response": {
+   "label": "Batch Inference"
+  },
+  "digitalocean_billing_data_point": {
+   "label": "Billing"
+  },
   "digitalocean_byoip_prefix": {
    "label": "BYOIP Prefixes"
+  },
+  "digitalocean_cdn": {
+   "label": "CDN"
   },
   "digitalocean_certificate": {
    "label": "Certificates"
@@ -66,10 +243,28 @@
   "digitalocean_cluster": {
    "label": "Kubernetes"
   },
+  "digitalocean_clusterlint_results": {
+   "label": "Kubernetes"
+  },
   "digitalocean_config": {
    "label": "Databases"
   },
+  "digitalocean_connection_pool": {
+   "label": "Databases"
+  },
+  "digitalocean_credentials": {
+   "label": "Kubernetes"
+  },
   "digitalocean_database": {
+   "label": "Databases"
+  },
+  "digitalocean_database_cluster_read": {
+   "label": "Databases"
+  },
+  "digitalocean_database_replica_read": {
+   "label": "Databases"
+  },
+  "digitalocean_database_user": {
    "label": "Databases"
   },
   "digitalocean_db": {
@@ -78,8 +273,23 @@
   "digitalocean_dedicated_inference": {
    "label": "Dedicated Inference"
   },
+  "digitalocean_dedicated_inference_accelerator": {
+   "label": "Dedicated Inference"
+  },
+  "digitalocean_dedicated_inference_gpu_model_config": {
+   "label": "Dedicated Inference"
+  },
+  "digitalocean_dedicated_inference_size": {
+   "label": "Dedicated Inference"
+  },
   "digitalocean_destination": {
    "label": "Monitoring"
+  },
+  "digitalocean_destination_omit_credentials": {
+   "label": "Monitoring"
+  },
+  "digitalocean_docker_credentials": {
+   "label": "Container Registry"
   },
   "digitalocean_domain": {
    "label": "Domains"
@@ -90,32 +300,113 @@
   "digitalocean_endpoint": {
    "label": "CDN"
   },
+  "digitalocean_error": {
+   "label": "Kubernetes"
+  },
   "digitalocean_event": {
    "label": "App Platform"
+  },
+  "digitalocean_events_logs": {
+   "label": "Databases"
   },
   "digitalocean_firewall": {
    "label": "Firewalls"
   },
+  "digitalocean_firewall_rule": {
+   "label": "Databases"
+  },
   "digitalocean_floating_ip": {
    "label": "Floating IPs"
+  },
+  "digitalocean_garbage_collection": {
+   "label": "Container Registry"
   },
   "digitalocean_image": {
    "label": "Images"
   },
+  "digitalocean_invoice": {
+   "label": "Billing"
+  },
+  "digitalocean_invoice_summary": {
+   "label": "Billing"
+  },
+  "digitalocean_kafka_schema_verbose": {
+   "label": "Databases"
+  },
+  "digitalocean_kafka_topic": {
+   "label": "Databases"
+  },
   "digitalocean_key": {
    "label": "SSH Keys"
+  },
+  "digitalocean_kubernete": {
+   "label": "Kubernetes"
+  },
+  "digitalocean_kubernetes_node_pool": {
+   "label": "Kubernetes"
+  },
+  "digitalocean_kubernetes_options": {
+   "label": "Kubernetes"
+  },
+  "digitalocean_kubernetes_version": {
+   "label": "Kubernetes"
   },
   "digitalocean_load_balancer": {
    "label": "Load Balancers"
   },
+  "digitalocean_logsink_schema": {
+   "label": "Databases"
+  },
+  "digitalocean_metric": {
+   "label": "Databases"
+  },
+  "digitalocean_metrics": {
+   "label": "Monitoring"
+  },
+  "digitalocean_model": {
+   "label": "Serverless Inference"
+  },
+  "digitalocean_monitoring": {
+   "label": "Monitoring"
+  },
   "digitalocean_namespace": {
    "label": "Functions"
+  },
+  "digitalocean_neighbor_ids": {
+   "label": "Droplets"
   },
   "digitalocean_nfs_get_response": {
    "label": "NFS"
   },
+  "digitalocean_nfs_response": {
+   "label": "NFS"
+  },
+  "digitalocean_nfs_snapshot_get_response": {
+   "label": "NFS"
+  },
+  "digitalocean_nfs_snapshot_response": {
+   "label": "NFS"
+  },
   "digitalocean_node_pool": {
    "label": "Kubernetes"
+  },
+  "digitalocean_one_clicks": {
+   "label": "1-Click Apps"
+  },
+  "digitalocean_online_migration": {
+   "label": "Databases"
+  },
+  "digitalocean_opensearch_index": {
+   "label": "Databases"
+  },
+  "digitalocean_options": {
+   "label": "Databases"
+  },
+  "digitalocean_organization_team": {
+   "label": "Organizations"
+  },
+  "digitalocean_partner_network_connect": {
+   "label": "Partner Network Connect"
   },
   "digitalocean_pool": {
    "label": "Databases"
@@ -132,6 +423,9 @@
   "digitalocean_replica": {
    "label": "Databases"
   },
+  "digitalocean_repository": {
+   "label": "Container Registry"
+  },
   "digitalocean_reserved_ip": {
    "label": "Reserved IPs"
   },
@@ -144,11 +438,35 @@
   "digitalocean_scan": {
    "label": "Security"
   },
+  "digitalocean_schema_registry": {
+   "label": "Databases"
+  },
+  "digitalocean_security": {
+   "label": "Security"
+  },
+  "digitalocean_settings": {
+   "label": "Security"
+  },
   "digitalocean_sink": {
+   "label": "Monitoring"
+  },
+  "digitalocean_sinks_response": {
    "label": "Monitoring"
   },
   "digitalocean_snapshot": {
    "label": "Snapshots"
+  },
+  "digitalocean_space": {
+   "label": "Spaces Keys"
+  },
+  "digitalocean_sql_mode": {
+   "label": "Databases"
+  },
+  "digitalocean_status_messages": {
+   "label": "Kubernetes"
+  },
+  "digitalocean_supported_droplet_backup_policy": {
+   "label": "Droplets"
   },
   "digitalocean_tag": {
    "label": "Tags"
@@ -159,11 +477,32 @@
   "digitalocean_trigger": {
    "label": "Functions"
   },
+  "digitalocean_uptime": {
+   "label": "Uptime Monitoring"
+  },
   "digitalocean_user": {
    "label": "Databases"
   },
+  "digitalocean_v2": {
+   "label": "Account"
+  },
+  "digitalocean_vectordb_backup": {
+   "label": "Vector Databases"
+  },
+  "digitalocean_vectordb_get_restore_status_response": {
+   "label": "Vector Databases"
+  },
+  "digitalocean_vectordb_get_vector_dbadmin_credentials_response": {
+   "label": "Vector Databases"
+  },
   "digitalocean_vectordb_get_vector_dbresponse": {
    "label": "Vector Databases"
+  },
+  "digitalocean_vectordb_vector_db": {
+   "label": "Vector Databases"
+  },
+  "digitalocean_version": {
+   "label": "Databases"
   },
   "digitalocean_volume": {
    "label": "Block Storage"
@@ -177,5 +516,6 @@
   "digitalocean_vpc_peering": {
    "label": "VPC Peering"
   }
- }
+ },
+ "services": {}
 }
