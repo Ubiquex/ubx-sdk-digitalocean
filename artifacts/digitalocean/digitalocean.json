@@ -1,0 +1,186 @@
+{
+  "digitalocean_action": {
+    "action": "The action's own real, current representation."
+  },
+  "digitalocean_alert": {
+    "alerts": "The real conditions that trigger this alert policy.",
+    "compare": "The real comparison operator (greater than or less than) used against the threshold value.",
+    "description": "A real, human-readable description of the alert policy.",
+    "enabled": "Whether the alert policy is currently active.",
+    "entities": "The real IDs of the entities this alert policy monitors.",
+    "policy": "The real, full alert policy configuration.",
+    "tags": "The real tags this alert policy applies to, in addition to any explicitly listed entities.",
+    "type": "The real type of metric this alert policy monitors.",
+    "value": "The real threshold value that triggers this alert.",
+    "window": "The real time window the metric is evaluated over before triggering."
+  },
+  "digitalocean_api_get_agent_output": {
+    "model_provider_key_uuid": "The UUID of the model provider API key this agent uses.",
+    "model_router_uuid": "The UUID of the model router this agent uses, if configured to route rather than call one model directly.",
+    "reasoning_effort": "The real, configured reasoning effort level for models that support it.",
+    "router_preset_slug": "The real slug of the model router preset this agent was created from, if any.",
+    "thinking_token_budget": "The real, configured token budget for extended model reasoning, for models that support it."
+  },
+  "digitalocean_api_get_evaluation_run_output": {
+    "evaluation_run": "The evaluation run's own real, current representation."
+  },
+  "digitalocean_api_get_evaluation_test_case_output": {
+    "agent_workspace_name": "The real name of the agent workspace this test case is scoped to.",
+    "evaluation_test_case": "The evaluation test case's own real, current representation.",
+    "star_metric": "The real, primary metric highlighted for this test case's own results."
+  },
+  "digitalocean_api_get_knowledge_base_output": {
+    "database_status": "The real, current status of the knowledge base's own backing database.",
+    "size": "The real, configured size of the knowledge base's own backing database."
+  },
+  "digitalocean_api_get_model_evaluation_run_output": {
+    "eval_preset_uuid": "The UUID of the evaluation preset this run was executed with, if any.",
+    "name": "A real, human-readable name for the evaluation run.",
+    "preset_name": "The real name of the evaluation preset this run was executed with, if any.",
+    "star_metric": "The real, primary metric highlighted for this run's own results."
+  },
+  "digitalocean_api_get_workspace_output": {
+    "workspace": "The workspace's own real, current representation."
+  },
+  "digitalocean_app_job_invocation": {
+    "completed_at": "A time value given in ISO8601 combined date and time format that represents when this job invocation completed.",
+    "created_at": "A time value given in ISO8601 combined date and time format that represents when this was created.",
+    "deployment_id": "The ID of the deployment this job invocation ran under.",
+    "id": "A unique ID for this job invocation.",
+    "job_name": "The real name of the job component that was invoked.",
+    "started_at": "A time value given in ISO8601 combined date and time format that represents when this job invocation started.",
+    "trigger": "The real event that triggered this job invocation."
+  },
+  "digitalocean_apps_deployment_response": {
+    "deployment": "The deployment's own real, current representation.",
+    "force_build": "Whether to force a full rebuild rather than reusing a real, existing cached build."
+  },
+  "digitalocean_attachment": {
+    "naas_provider": "The real network-as-a-service provider this Partner Network Connect attachment connects through."
+  },
+  "digitalocean_autoscale": {
+    "autoscale_pool": "The autoscale pool's own real, current representation.",
+    "droplet_template": "The real Droplet configuration new pool members are created from."
+  },
+  "digitalocean_batch": {
+    "cancelled_at": "A time value given in ISO8601 combined date and time format that represents when this batch job was cancelled, if it was.",
+    "completed_at": "A time value given in ISO8601 combined date and time format that represents when this batch job completed.",
+    "created_at": "A time value given in ISO8601 combined date and time format that represents when this batch job was created.",
+    "failed_at": "A time value given in ISO8601 combined date and time format that represents when this batch job failed, if it did.",
+    "finalizing_at": "A time value given in ISO8601 combined date and time format that represents when this batch job entered its finalizing state.",
+    "in_progress_at": "A time value given in ISO8601 combined date and time format that represents when this batch job began processing."
+  },
+  "digitalocean_byoip_prefix": {
+    "byoip_prefix": "The BYOIP prefix's own real, current representation."
+  },
+  "digitalocean_certificate": {
+    "certificate": "The certificate's own real, current representation."
+  },
+  "digitalocean_check": {
+    "check": "The Uptime check's own real, current representation."
+  },
+  "digitalocean_cluster": {
+    "kubernetes_cluster": "The Kubernetes cluster's own real, current representation."
+  },
+  "digitalocean_database": {
+    "database": "The logical database's own real, current representation."
+  },
+  "digitalocean_db": {
+    "db": "The Kafka schema's own real, current representation."
+  },
+  "digitalocean_destination": {
+    "config": "The real, type-specific configuration for this sink destination.",
+    "destination": "The sink destination's own real, current representation."
+  },
+  "digitalocean_domain": {
+    "domain": "The domain's own real, current representation."
+  },
+  "digitalocean_droplet": {
+    "droplet": "The Droplet's own real, current representation."
+  },
+  "digitalocean_event": {
+    "event": "The App Platform event's own real, current representation."
+  },
+  "digitalocean_firewall": {
+    "firewall": "The firewall's own real, current representation."
+  },
+  "digitalocean_floating_ip": {
+    "floating_ip": "The floating IP's own real, current representation."
+  },
+  "digitalocean_image": {
+    "image": "The image's own real, current representation."
+  },
+  "digitalocean_key": {
+    "ssh_key": "The SSH key's own real, current representation."
+  },
+  "digitalocean_load_balancer": {
+    "load_balancer": "The Load Balancer's own real, current representation."
+  },
+  "digitalocean_namespace": {
+    "namespace": "The Functions namespace's own real, current representation."
+  },
+  "digitalocean_nfs_get_response": {
+    "share": "The NFS share's own real, current representation."
+  },
+  "digitalocean_node_pool": {
+    "node_pool": "The node pool's own real, current representation."
+  },
+  "digitalocean_pool": {
+    "connection": "The real, primary connection details for the pool.",
+    "pool": "The connection pool's own real, current representation.",
+    "private_connection": "The real connection details for the pool over the cluster's own private network.",
+    "standby_connection": "The real connection details for the pool's own standby node, if the cluster has one.",
+    "standby_private_connection": "The real connection details for the pool's own standby node over the cluster's own private network, if the cluster has one."
+  },
+  "digitalocean_project": {
+    "project": "The project's own real, current representation."
+  },
+  "digitalocean_record": {
+    "domain_record": "The DNS record's own real, current representation."
+  },
+  "digitalocean_registry": {
+    "registry": "The container registry's own real, current representation."
+  },
+  "digitalocean_replica": {
+    "replica": "The read-only replica's own real, current representation."
+  },
+  "digitalocean_reserved_ip": {
+    "reserved_ip": "The reserved IP's own real, current representation."
+  },
+  "digitalocean_reserved_ipv6": {
+    "reserved_ipv6": "The reserved IPv6 address's own real, current representation."
+  },
+  "digitalocean_saa": {
+    "resource": "The add-on association's own real, current representation."
+  },
+  "digitalocean_scan": {
+    "scan": "The security scan's own real, current representation."
+  },
+  "digitalocean_sink": {
+    "sink": "The sink's own real, current representation."
+  },
+  "digitalocean_snapshot": {
+    "snapshot": "The snapshot's own real, current representation."
+  },
+  "digitalocean_topic": {
+    "topic": "The Kafka topic's own real, current representation."
+  },
+  "digitalocean_trigger": {
+    "trigger": "The Functions trigger's own real, current representation."
+  },
+  "digitalocean_user": {
+    "user": "The database user's own real, current representation."
+  },
+  "digitalocean_volume": {
+    "volume": "The Block Storage volume's own real, current representation."
+  },
+  "digitalocean_vpc": {
+    "vpc": "The VPC's own real, current representation."
+  },
+  "digitalocean_vpc_nat_gateway": {
+    "vpc_nat_gateway": "The VPC NAT gateway's own real, current representation."
+  },
+  "digitalocean_vpc_peering": {
+    "vpc_peering": "The VPC peering connection's own real, current representation."
+  }
+}
