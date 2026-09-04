@@ -4,31 +4,31 @@ package apps
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type GetLogsResponseConfig struct {
-	AppId any
-	ComponentName any
-	Follow any
+	AppId                any
+	ComponentName        any
+	Follow               any
 	PodConnectionTimeout any
-	Type any
+	Type                 any
 }
 
 type GetLogsResponseAttrs struct {
-	AppId any
+	AppId         any
 	ComponentName any
-	Follow any
-	HistoricUrls any
+	Follow        any
+	HistoricUrls  any
 	// A URL of the real-time live logs. This URL may use either the `https://` or `wss://` protocols and will keep pushing live logs as they become available.
-	LiveUrl any
+	LiveUrl              any
 	PodConnectionTimeout any
-	Type any
+	Type                 any
 }
 
 var GetLogsResponse = ubx.DataSourceBinding{
 	WireType: "digitalocean_apps_get_logs_response",
 	Fields: ubx.FieldMap{
-		"AppId": ubx.FieldSpec{WireName: "app_id"},
-		"ComponentName": ubx.FieldSpec{WireName: "component_name"},
-		"Follow": ubx.FieldSpec{WireName: "follow"},
+		"AppId":                ubx.FieldSpec{WireName: "app_id"},
+		"ComponentName":        ubx.FieldSpec{WireName: "component_name"},
+		"Follow":               ubx.FieldSpec{WireName: "follow"},
 		"PodConnectionTimeout": ubx.FieldSpec{WireName: "pod_connection_timeout"},
-		"Type": ubx.FieldSpec{WireName: "type"},
+		"Type":                 ubx.FieldSpec{WireName: "type"},
 	},
 }

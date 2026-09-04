@@ -10,31 +10,31 @@ type NodePool_NodePools_Nodes_Status struct {
 type NodePool_NodePools_Nodes struct {
 	CreatedAt any
 	DropletId any
-	Id any
-	Name any
-	Status any
+	Id        any
+	Name      any
+	Status    any
 	UpdatedAt any
 }
 
 type NodePool_NodePools_Taints struct {
 	Effect any
-	Key any
-	Value any
+	Key    any
+	Value  any
 }
 
 type NodePool_NodePools struct {
-	AutoScale any
-	Count any
+	AutoScale        any
+	Count            any
 	GpuPartitionMode any
-	Id any
-	Labels any
-	MaxNodes any
-	MinNodes any
-	Name any
-	Nodes any
-	Size any
-	Tags any
-	Taints any
+	Id               any
+	Labels           any
+	MaxNodes         any
+	MinNodes         any
+	Name             any
+	Nodes            any
+	Size             any
+	Tags             any
+	Taints           any
 }
 
 type NodePoolConfig struct {

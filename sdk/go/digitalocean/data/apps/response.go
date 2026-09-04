@@ -3,23 +3,492 @@ package apps
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Response_Apps_ActiveDeployment_Functions struct {
+	Name             any
+	Namespace        any
+	SourceCommitHash any
+}
+
+type Response_Apps_ActiveDeployment_Jobs struct {
+	Name             any
+	SourceCommitHash any
+}
+
+type Response_Apps_ActiveDeployment_Progress_Steps_Reason struct {
+	Code    any
+	Message any
+}
+
+type Response_Apps_ActiveDeployment_Progress_Steps struct {
+	ComponentName any
+	EndedAt       any
+	MessageBase   any
+	Name          any
+	Reason        any
+	StartedAt     any
+	Status        any
+	Steps         any
+}
+
+type Response_Apps_ActiveDeployment_Progress struct {
+	ErrorSteps   any
+	PendingSteps any
+	RunningSteps any
+	Steps        any
+	SuccessSteps any
+	SummarySteps any
+	TotalSteps   any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Databases struct {
+	ClusterName any
+	DbName      any
+	DbUser      any
+	Engine      any
+	Name        any
+	Production  any
+	Version     any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Domains struct {
+	Domain            any
+	MinimumTlsVersion any
+	Type              any
+	Wildcard          any
+	Zone              any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Egress struct {
+	Type any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_Alerts struct {
+	Disabled any
+	Operator any
+	Rule     any
+	Value    any
+	Window   any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_Bitbucket struct {
+	Branch       any
+	DeployOnPush any
+	Repo         any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_Cors_AllowOrigins struct {
+	Exact  any
+	Prefix any
+	Regex  any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_Cors struct {
+	AllowCredentials any
+	AllowHeaders     any
+	AllowMethods     any
+	AllowOrigins     any
+	ExposeHeaders    any
+	MaxAge           any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_Envs struct {
+	Key   any
+	Scope any
+	Type  any
+	Value any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_Git struct {
+	Branch       any
+	RepoCloneUrl any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_LogDestinations_Datadog struct {
+	ApiKey   any
+	Endpoint any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_LogDestinations_Logtail struct {
+	Token any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_LogDestinations_OpenSearch_BasicAuth struct {
+	Password any
+	User     any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_LogDestinations_OpenSearch struct {
+	BasicAuth   any
+	ClusterName any
+	Endpoint    any
+	IndexName   any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_LogDestinations_Papertrail struct {
+	Endpoint any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_LogDestinations struct {
+	Datadog    any
+	Logtail    any
+	Name       any
+	OpenSearch any
+	Papertrail any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions_Routes struct {
+	Path               any
+	PreservePathPrefix any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Functions struct {
+	Alerts          any
+	Bitbucket       any
+	Cors            any
+	Envs            any
+	Git             any
+	Github          any
+	Gitlab          any
+	LogDestinations any
+	Name            any
+	Routes          any
+	SourceDir       any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Ingress_Rules_Component struct {
+	Name               any
+	PreservePathPrefix any
+	Rewrite            any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Ingress_Rules_Match_Authority struct {
+	Exact any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Ingress_Rules_Match_Path struct {
+	Prefix any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Ingress_Rules_Match struct {
+	Authority any
+	Path      any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Ingress_Rules_Redirect struct {
+	Authority    any
+	Port         any
+	RedirectCode any
+	Scheme       any
+	Uri          any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Ingress_Rules struct {
+	Component any
+	Cors      any
+	Match     any
+	Redirect  any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Ingress struct {
+	CustomErrorPageUrl any
+	Rules              any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Jobs_Image_DeployOnPush struct {
+	Enabled any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Jobs_Image struct {
+	DeployOnPush        any
+	Digest              any
+	Registry            any
+	RegistryCredentials any
+	RegistryType        any
+	Repository          any
+	Tag                 any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Jobs_Termination struct {
+	GracePeriodSeconds any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Jobs struct {
+	Bitbucket        any
+	BuildCommand     any
+	DockerfilePath   any
+	EnvironmentSlug  any
+	Envs             any
+	Git              any
+	Github           any
+	Gitlab           any
+	Image            any
+	InstanceCount    any
+	InstanceSizeSlug any
+	Kind             any
+	LogDestinations  any
+	Name             any
+	RunCommand       any
+	SourceDir        any
+	Termination      any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Maintenance struct {
+	Archive        any
+	Enabled        any
+	OfflinePageUrl any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Services_Autoscaling_Metrics_RequestDuration struct {
+	P95Milliseconds any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Services_Autoscaling_Metrics_RequestsPerSecond struct {
+	PerInstance any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Services_Autoscaling_Metrics struct {
+	RequestDuration   any
+	RequestsPerSecond any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Services_Autoscaling struct {
+	MaxInstanceCount any
+	Metrics          any
+	MinInstanceCount any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Services_HealthCheck struct {
+	FailureThreshold    any
+	HttpPath            any
+	InitialDelaySeconds any
+	PeriodSeconds       any
+	Port                any
+	SuccessThreshold    any
+	TimeoutSeconds      any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Services_Termination struct {
+	DrainSeconds       any
+	GracePeriodSeconds any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Services struct {
+	Autoscaling         any
+	Bitbucket           any
+	BuildCommand        any
+	Cors                any
+	DockerfilePath      any
+	EnvironmentSlug     any
+	Envs                any
+	Git                 any
+	Github              any
+	Gitlab              any
+	HealthCheck         any
+	HttpPort            any
+	Image               any
+	InstanceCount       any
+	InstanceSizeSlug    any
+	InternalPorts       any
+	LivenessHealthCheck any
+	LogDestinations     any
+	Name                any
+	Protocol            any
+	Routes              any
+	RunCommand          any
+	SourceDir           any
+	Termination         any
+}
+
+type Response_Apps_ActiveDeployment_Spec_StaticSites struct {
+	Bitbucket        any
+	BuildCommand     any
+	CatchallDocument any
+	Cors             any
+	DockerfilePath   any
+	EnvironmentSlug  any
+	Envs             any
+	ErrorDocument    any
+	Git              any
+	Github           any
+	Gitlab           any
+	Image            any
+	IndexDocument    any
+	LogDestinations  any
+	Name             any
+	OutputDir        any
+	Routes           any
+	RunCommand       any
+	SourceDir        any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Vpc_EgressIps struct {
+	Ip any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Vpc struct {
+	EgressIps any
+	Id        any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Workers_Autoscaling_Metrics_Cpu struct {
+	Percent any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Workers_Autoscaling_Metrics struct {
+	Cpu any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Workers_Autoscaling struct {
+	MaxInstanceCount any
+	Metrics          any
+	MinInstanceCount any
+}
+
+type Response_Apps_ActiveDeployment_Spec_Workers struct {
+	Autoscaling         any
+	Bitbucket           any
+	BuildCommand        any
+	DockerfilePath      any
+	EnvironmentSlug     any
+	Envs                any
+	Git                 any
+	Github              any
+	Gitlab              any
+	Image               any
+	InstanceCount       any
+	InstanceSizeSlug    any
+	LivenessHealthCheck any
+	LogDestinations     any
+	Name                any
+	RunCommand          any
+	SourceDir           any
+	Termination         any
+}
+
+type Response_Apps_ActiveDeployment_Spec struct {
+	Databases                    any
+	DisableEdgeCache             any
+	DisableEmailObfuscation      any
+	Domains                      any
+	Egress                       any
+	EnhancedThreatControlEnabled any
+	Functions                    any
+	Ingress                      any
+	Jobs                         any
+	Maintenance                  any
+	Name                         any
+	Region                       any
+	Services                     any
+	StaticSites                  any
+	Vpc                          any
+	Workers                      any
+}
+
+type Response_Apps_ActiveDeployment struct {
+	Cause              any
+	ClonedFrom         any
+	CreatedAt          any
+	Functions          any
+	Id                 any
+	Jobs               any
+	Phase              any
+	PhaseLastUpdatedAt any
+	Progress           any
+	Services           any
+	Spec               any
+	StaticSites        any
+	TierSlug           any
+	UpdatedAt          any
+	Workers            any
+}
+
+type Response_Apps_DedicatedIps struct {
+	Id     any
+	Ip     any
+	Status any
+}
+
+type Response_Apps_Domains_Progress struct {
+	Steps any
+}
+
+type Response_Apps_Domains_Validations struct {
+	TxtName  any
+	TxtValue any
+}
+
+type Response_Apps_Domains struct {
+	CertificateExpiresAt    any
+	Id                      any
+	Phase                   any
+	Progress                any
+	RotateValidationRecords any
+	Spec                    any
+	Validations             any
+}
+
+type Response_Apps_Region struct {
+	Continent   any
+	DataCenters any
+	Default     any
+	Disabled    any
+	Flag        any
+	Label       any
+	Reason      any
+	Slug        any
+}
+
+type Response_Apps struct {
+	ActiveDeployment        any
+	CreatedAt               any
+	DedicatedIps            any
+	DefaultIngress          any
+	Domains                 any
+	Id                      any
+	InProgressDeployment    any
+	LastDeploymentCreatedAt any
+	LiveDomain              any
+	LiveUrl                 any
+	LiveUrlBase             any
+	OwnerUuid               any
+	PendingDeployment       any
+	PinnedDeployment        any
+	ProjectId               any
+	Region                  any
+	Spec                    any
+	TierSlug                any
+	UpdatedAt               any
+	Vpc                     any
+}
+
+type Response_Links struct {
+	Pages any
+}
+
+type Response_Meta struct {
+	Total any
+}
+
 type ResponseConfig struct {
-	Page any
-	PerPage any
+	Page         any
+	PerPage      any
 	WithProjects any
 }
 
 type ResponseAttrs struct {
-	Page any
-	PerPage any
+	Apps         any
+	Links        any
+	Meta         any
+	Page         any
+	PerPage      any
 	WithProjects any
 }
 
 var Response = ubx.DataSourceBinding{
 	WireType: "digitalocean_apps_response",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Page":         ubx.FieldSpec{WireName: "page"},
+		"PerPage":      ubx.FieldSpec{WireName: "per_page"},
 		"WithProjects": ubx.FieldSpec{WireName: "with_projects"},
 	},
 }

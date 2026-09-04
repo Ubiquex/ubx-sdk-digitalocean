@@ -10,13 +10,13 @@ type Options_Options_Regions struct {
 
 type Options_Options_Versions struct {
 	KubernetesVersion any
-	Slug any
+	Slug              any
 	SupportedFeatures any
 }
 
 type Options_Options struct {
-	Regions any
-	Sizes any
+	Regions  any
+	Sizes    any
 	Versions any
 }
 
@@ -29,6 +29,5 @@ type OptionsAttrs struct {
 
 var Options = ubx.DataSourceBinding{
 	WireType: "digitalocean_kubernetes_options",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

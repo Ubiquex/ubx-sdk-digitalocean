@@ -6,3 +6,4 @@ SOURCE_PROVENANCE = {"source": "digitalocean", "version": "dynamic"}
 
 from .app_info import AppInfo, AppInfoConfig
 from .resource import Resource, ResourceConfig
+from .metadata import Metadata, MetadataConfig

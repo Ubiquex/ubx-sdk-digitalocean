@@ -4,6 +4,8 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "digitalocean", "version": "dynamic"}
 
+from .access_point_get_response import AccessPointGetResponse, AccessPointGetResponseConfig
+from .access_point_response import AccessPointResponse, AccessPointResponseConfig
 from .response import Response, ResponseConfig
 from .snapshot_get_response import SnapshotGetResponse, SnapshotGetResponseConfig
 from .snapshot_response import SnapshotResponse, SnapshotResponseConfig

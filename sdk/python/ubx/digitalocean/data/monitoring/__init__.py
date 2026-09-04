@@ -4,4 +4,7 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "digitalocean", "version": "dynamic"}
 
-from .monitoring import Monitoring, MonitoringConfig
+from .alert import Alert, AlertConfig
+from .destination_omit_credentials import DestinationOmitCredentials, DestinationOmitCredentialsConfig
+from .metrics import Metrics, MetricsConfig
+from .sinks_response import SinksResponse, SinksResponseConfig

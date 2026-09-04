@@ -5,19 +5,19 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type InstanceSize_InstanceSizes struct {
 	BandwidthAllowanceGib any
-	CpuType any
-	Cpus any
-	DeprecationIntent any
-	MemoryBytes any
-	Name any
-	Scalable any
-	SingleInstanceOnly any
-	Slug any
-	TierDowngradeTo any
-	TierSlug any
-	TierUpgradeTo any
-	UsdPerMonth any
-	UsdPerSecond any
+	CpuType               any
+	Cpus                  any
+	DeprecationIntent     any
+	MemoryBytes           any
+	Name                  any
+	Scalable              any
+	SingleInstanceOnly    any
+	Slug                  any
+	TierDowngradeTo       any
+	TierSlug              any
+	TierUpgradeTo         any
+	UsdPerMonth           any
+	UsdPerSecond          any
 }
 
 type InstanceSizeConfig struct {
@@ -25,11 +25,10 @@ type InstanceSizeConfig struct {
 
 type InstanceSizeAttrs struct {
 	DiscountPercent any
-	InstanceSizes any
+	InstanceSizes   any
 }
 
 var InstanceSize = ubx.DataSourceBinding{
 	WireType: "digitalocean_apps_instance_size",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

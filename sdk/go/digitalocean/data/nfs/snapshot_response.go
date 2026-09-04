@@ -5,29 +5,29 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SnapshotResponse_Snapshots struct {
 	CreatedAt any
-	Id any
-	Name any
-	Region any
-	ShareId any
-	SizeGib any
-	Status any
+	Id        any
+	Name      any
+	Region    any
+	ShareId   any
+	SizeGib   any
+	Status    any
 }
 
 type SnapshotResponseConfig struct {
-	Region any
+	Region  any
 	ShareId any
 }
 
 type SnapshotResponseAttrs struct {
-	Region any
-	ShareId any
+	Region    any
+	ShareId   any
 	Snapshots any
 }
 
 var SnapshotResponse = ubx.DataSourceBinding{
 	WireType: "digitalocean_nfs_snapshot_response",
 	Fields: ubx.FieldMap{
-		"Region": ubx.FieldSpec{WireName: "region"},
+		"Region":  ubx.FieldSpec{WireName: "region"},
 		"ShareId": ubx.FieldSpec{WireName: "share_id"},
 	},
 }

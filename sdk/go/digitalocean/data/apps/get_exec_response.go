@@ -4,15 +4,15 @@ package apps
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type GetExecResponseConfig struct {
-	AppId any
+	AppId         any
 	ComponentName any
-	InstanceName any
+	InstanceName  any
 }
 
 type GetExecResponseAttrs struct {
-	AppId any
+	AppId         any
 	ComponentName any
-	InstanceName any
+	InstanceName  any
 	// A websocket URL that allows sending/receiving console input and receiving console output.
 	Url any
 }
@@ -20,8 +20,8 @@ type GetExecResponseAttrs struct {
 var GetExecResponse = ubx.DataSourceBinding{
 	WireType: "digitalocean_apps_get_exec_response",
 	Fields: ubx.FieldMap{
-		"AppId": ubx.FieldSpec{WireName: "app_id"},
+		"AppId":         ubx.FieldSpec{WireName: "app_id"},
 		"ComponentName": ubx.FieldSpec{WireName: "component_name"},
-		"InstanceName": ubx.FieldSpec{WireName: "instance_name"},
+		"InstanceName":  ubx.FieldSpec{WireName: "instance_name"},
 	},
 }
