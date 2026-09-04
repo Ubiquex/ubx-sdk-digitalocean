@@ -5,19 +5,19 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type GetInstanceSizeResponse_InstanceSize struct {
 	BandwidthAllowanceGib any
-	CpuType any
-	Cpus any
-	DeprecationIntent any
-	MemoryBytes any
-	Name any
-	Scalable any
-	SingleInstanceOnly any
-	Slug any
-	TierDowngradeTo any
-	TierSlug any
-	TierUpgradeTo any
-	UsdPerMonth any
-	UsdPerSecond any
+	CpuType               any
+	Cpus                  any
+	DeprecationIntent     any
+	MemoryBytes           any
+	Name                  any
+	Scalable              any
+	SingleInstanceOnly    any
+	Slug                  any
+	TierDowngradeTo       any
+	TierSlug              any
+	TierUpgradeTo         any
+	UsdPerMonth           any
+	UsdPerSecond          any
 }
 
 type GetInstanceSizeResponseConfig struct {
@@ -26,7 +26,7 @@ type GetInstanceSizeResponseConfig struct {
 
 type GetInstanceSizeResponseAttrs struct {
 	InstanceSize any
-	Slug any
+	Slug         any
 }
 
 var GetInstanceSizeResponse = ubx.DataSourceBinding{

@@ -4,54 +4,54 @@ package addons
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AppInfo_Apps_Plans_Dimensions_Volumes struct {
-	Id any
-	LowVolume any
-	MaxVolume any
+	Id           any
+	LowVolume    any
+	MaxVolume    any
 	PricePerUnit any
 }
 
 type AppInfo_Apps_Plans_Dimensions struct {
 	DisplayName any
 	FeatureName any
-	Id any
-	Sku any
-	Slug any
-	Volumes any
+	Id          any
+	Sku         any
+	Slug        any
+	Volumes     any
 }
 
 type AppInfo_Apps_Plans_Features struct {
 	CreatedAt any
-	Id any
-	Name any
-	Type any
-	Unit any
+	Id        any
+	Name      any
+	Type      any
+	Unit      any
 	UpdatedAt any
-	Value any
+	Value     any
 }
 
 type AppInfo_Apps_Plans struct {
-	Active any
-	AppId any
-	Available any
-	ByDefault any
-	CreatedAt any
-	Description any
-	Dimensions any
-	DisplayName any
-	Features any
-	Id any
+	Active        any
+	AppId         any
+	Available     any
+	ByDefault     any
+	CreatedAt     any
+	Description   any
+	Dimensions    any
+	DisplayName   any
+	Features      any
+	Id            any
 	PricePerMonth any
-	Slug any
-	State any
-	UpdatedAt any
-	Uuid any
+	Slug          any
+	State         any
+	UpdatedAt     any
+	Uuid          any
 }
 
 type AppInfo_Apps struct {
 	AppSlug any
-	Eula any
-	Plans any
-	Tos any
+	Eula    any
+	Plans   any
+	Tos     any
 }
 
 type AppInfoConfig struct {
@@ -63,6 +63,5 @@ type AppInfoAttrs struct {
 
 var AppInfo = ubx.DataSourceBinding{
 	WireType: "digitalocean_addons_app_info",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

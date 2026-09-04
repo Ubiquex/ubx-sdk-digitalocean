@@ -3,20 +3,42 @@ package account
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Account_Account_Team struct {
+	// The name for the current team.
+	Name any
+	// The unique universal identifier for the current team.
+	Uuid any
+}
+
+type Account_Account struct {
+	// The total number of Droplets current user or team may have active at one time. <br><br>Requires `droplet:read` scope.
+	DropletLimit any
+	// The email address used by the current user to register for DigitalOcean.
+	Email any
+	// If true, the user has verified their account via email. False otherwise.
+	EmailVerified any
+	// The total number of Floating IPs the current user or team may have. <br><br>Requires `reserved_ip:read` scope.
+	FloatingIpLimit any
+	// The display name for the current user.
+	Name any
+	// This value is one of "active", "warning" or "locked".
+	Status any
+	// A human-readable message giving more details about the status of the account.
+	StatusMessage any
+	// When authorized in a team context, includes information about the current team.
+	Team any
+	// The unique universal identifier for the current user.
+	Uuid any
+}
+
 type AccountConfig struct {
-	Page any
-	PerPage any
 }
 
 type AccountAttrs struct {
-	Page any
-	PerPage any
+	Account any
 }
 
 var Account = ubx.DataSourceBinding{
 	WireType: "digitalocean_account",
-	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-	},
+	Fields:   ubx.FieldMap{},
 }

@@ -4,4 +4,9 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "digitalocean", "version": "dynamic"}
 
+from .balance import Balance, BalanceConfig
 from .data_point import DataPoint, DataPointConfig
+from .csv import Csv, CsvConfig
+from .invoice import Invoice, InvoiceConfig
+from .invoice_summary import InvoiceSummary, InvoiceSummaryConfig
+from .pdf import Pdf, PdfConfig

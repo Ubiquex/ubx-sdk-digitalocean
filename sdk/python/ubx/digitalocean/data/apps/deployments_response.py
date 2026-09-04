@@ -7,6 +7,413 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class DeploymentsResponse_Deployments_Functions:
+    name: Any = None
+    namespace: Any = None
+    source_commit_hash: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Jobs:
+    name: Any = None
+    source_commit_hash: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Progress_Steps_Reason:
+    code: Any = None
+    message: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Progress_Steps:
+    component_name: Any = None
+    ended_at: Any = None
+    message_base: Any = None
+    name: Any = None
+    reason: Any = None
+    started_at: Any = None
+    status: Any = None
+    steps: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Progress:
+    error_steps: Any = None
+    pending_steps: Any = None
+    running_steps: Any = None
+    steps: Any = None
+    success_steps: Any = None
+    summary_steps: Any = None
+    total_steps: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Databases:
+    cluster_name: Any = None
+    db_name: Any = None
+    db_user: Any = None
+    engine: Any = None
+    name: Any = None
+    production: Any = None
+    version: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Domains:
+    domain: Any = None
+    minimum_tls_version: Any = None
+    type: Any = None
+    wildcard: Any = None
+    zone: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Egress:
+    type: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_Alerts:
+    disabled: Any = None
+    operator: Any = None
+    rule: Any = None
+    value: Any = None
+    window: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_Bitbucket:
+    branch: Any = None
+    deploy_on_push: Any = None
+    repo: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_Cors_AllowOrigins:
+    exact: Any = None
+    prefix: Any = None
+    regex: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_Cors:
+    allow_credentials: Any = None
+    allow_headers: Any = None
+    allow_methods: Any = None
+    allow_origins: Any = None
+    expose_headers: Any = None
+    max_age: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_Envs:
+    key: Any = None
+    scope: Any = None
+    type: Any = None
+    value: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_Git:
+    branch: Any = None
+    repo_clone_url: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_LogDestinations_Datadog:
+    api_key: Any = None
+    endpoint: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_LogDestinations_Logtail:
+    token: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_LogDestinations_OpenSearch_BasicAuth:
+    password: Any = None
+    user: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_LogDestinations_OpenSearch:
+    basic_auth: Any = None
+    cluster_name: Any = None
+    endpoint: Any = None
+    index_name: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_LogDestinations_Papertrail:
+    endpoint: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_LogDestinations:
+    datadog: Any = None
+    logtail: Any = None
+    name: Any = None
+    open_search: Any = None
+    papertrail: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions_Routes:
+    path: Any = None
+    preserve_path_prefix: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Functions:
+    alerts: Any = None
+    bitbucket: Any = None
+    cors: Any = None
+    envs: Any = None
+    git: Any = None
+    github: Any = None
+    gitlab: Any = None
+    log_destinations: Any = None
+    name: Any = None
+    routes: Any = None
+    source_dir: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Ingress_Rules_Component:
+    name: Any = None
+    preserve_path_prefix: Any = None
+    rewrite: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Ingress_Rules_Match_Authority:
+    exact: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Ingress_Rules_Match_Path:
+    prefix: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Ingress_Rules_Match:
+    authority: Any = None
+    path: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Ingress_Rules_Redirect:
+    authority: Any = None
+    port: Any = None
+    redirect_code: Any = None
+    scheme: Any = None
+    uri: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Ingress_Rules:
+    component: Any = None
+    cors: Any = None
+    match: Any = None
+    redirect: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Ingress:
+    custom_error_page_url: Any = None
+    rules: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Jobs_Image_DeployOnPush:
+    enabled: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Jobs_Image:
+    deploy_on_push: Any = None
+    digest: Any = None
+    registry: Any = None
+    registry_credentials: Any = None
+    registry_type: Any = None
+    repository: Any = None
+    tag: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Jobs_Termination:
+    grace_period_seconds: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Jobs:
+    bitbucket: Any = None
+    build_command: Any = None
+    dockerfile_path: Any = None
+    environment_slug: Any = None
+    envs: Any = None
+    git: Any = None
+    github: Any = None
+    gitlab: Any = None
+    image: Any = None
+    instance_count: Any = None
+    instance_size_slug: Any = None
+    kind: Any = None
+    log_destinations: Any = None
+    name: Any = None
+    run_command: Any = None
+    source_dir: Any = None
+    termination: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Maintenance:
+    archive: Any = None
+    enabled: Any = None
+    offline_page_url: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Services_Autoscaling_Metrics_RequestDuration:
+    p95_milliseconds: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Services_Autoscaling_Metrics_RequestsPerSecond:
+    per_instance: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Services_Autoscaling_Metrics:
+    request_duration: Any = None
+    requests_per_second: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Services_Autoscaling:
+    max_instance_count: Any = None
+    metrics: Any = None
+    min_instance_count: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Services_HealthCheck:
+    failure_threshold: Any = None
+    http_path: Any = None
+    initial_delay_seconds: Any = None
+    period_seconds: Any = None
+    port: Any = None
+    success_threshold: Any = None
+    timeout_seconds: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Services_Termination:
+    drain_seconds: Any = None
+    grace_period_seconds: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Services:
+    autoscaling: Any = None
+    bitbucket: Any = None
+    build_command: Any = None
+    cors: Any = None
+    dockerfile_path: Any = None
+    environment_slug: Any = None
+    envs: Any = None
+    git: Any = None
+    github: Any = None
+    gitlab: Any = None
+    health_check: Any = None
+    http_port: Any = None
+    image: Any = None
+    instance_count: Any = None
+    instance_size_slug: Any = None
+    internal_ports: Any = None
+    liveness_health_check: Any = None
+    log_destinations: Any = None
+    name: Any = None
+    protocol: Any = None
+    routes: Any = None
+    run_command: Any = None
+    source_dir: Any = None
+    termination: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_StaticSites:
+    bitbucket: Any = None
+    build_command: Any = None
+    catchall_document: Any = None
+    cors: Any = None
+    dockerfile_path: Any = None
+    environment_slug: Any = None
+    envs: Any = None
+    error_document: Any = None
+    git: Any = None
+    github: Any = None
+    gitlab: Any = None
+    image: Any = None
+    index_document: Any = None
+    log_destinations: Any = None
+    name: Any = None
+    output_dir: Any = None
+    routes: Any = None
+    run_command: Any = None
+    source_dir: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Vpc_EgressIps:
+    ip: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Vpc:
+    egress_ips: Any = None
+    id: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Workers_Autoscaling_Metrics_Cpu:
+    percent: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Workers_Autoscaling_Metrics:
+    cpu: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Workers_Autoscaling:
+    max_instance_count: Any = None
+    metrics: Any = None
+    min_instance_count: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec_Workers:
+    autoscaling: Any = None
+    bitbucket: Any = None
+    build_command: Any = None
+    dockerfile_path: Any = None
+    environment_slug: Any = None
+    envs: Any = None
+    git: Any = None
+    github: Any = None
+    gitlab: Any = None
+    image: Any = None
+    instance_count: Any = None
+    instance_size_slug: Any = None
+    liveness_health_check: Any = None
+    log_destinations: Any = None
+    name: Any = None
+    run_command: Any = None
+    source_dir: Any = None
+    termination: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments_Spec:
+    databases: Any = None
+    disable_edge_cache: Any = None
+    disable_email_obfuscation: Any = None
+    domains: Any = None
+    egress: Any = None
+    enhanced_threat_control_enabled: Any = None
+    functions: Any = None
+    ingress: Any = None
+    jobs: Any = None
+    maintenance: Any = None
+    name: Any = None
+    region: Any = None
+    services: Any = None
+    static_sites: Any = None
+    vpc: Any = None
+    workers: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Deployments:
+    cause: Any = None
+    cloned_from: Any = None
+    created_at: Any = None
+    functions: Any = None
+    id: Any = None
+    jobs: Any = None
+    phase: Any = None
+    phase_last_updated_at: Any = None
+    progress: Any = None
+    services: Any = None
+    spec: Any = None
+    static_sites: Any = None
+    tier_slug: Any = None
+    updated_at: Any = None
+    workers: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Links:
+    pages: Any = None
+
+@dataclasses.dataclass
+class DeploymentsResponse_Meta:
+    total: Any = None
+
+@dataclasses.dataclass
 class DeploymentsResponseConfig:
     app_id: Any = None
     deployment_types: Any = None
@@ -17,6 +424,9 @@ class DeploymentsResponseConfig:
 class DeploymentsResponseAttrs:
     app_id: Any = None
     deployment_types: Any = None
+    deployments: Any = None
+    links: Any = None
+    meta: Any = None
     page: Any = None
     per_page: Any = None
 

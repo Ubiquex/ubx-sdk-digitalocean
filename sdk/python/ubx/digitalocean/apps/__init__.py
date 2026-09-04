@@ -4,4 +4,6 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "digitalocean", "version": "dynamic"}
 
+from .app_job_invocation import AppJobInvocation, AppJobInvocationConfig
+from .app_response import AppResponse, AppResponseConfig
 from .deployment_response import DeploymentResponse, DeploymentResponseConfig

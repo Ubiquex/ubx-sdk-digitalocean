@@ -1,0 +1,21 @@
+{
+  "version": "5",
+  "specifiers": {
+    "npm:@ubx/sdk@1": "1.0.1"
+  },
+  "npm": {
+    "@ubx/sdk@1.0.1": {
+      "integrity": "sha512-Ucgwz5/nbauQhAhWFD4hi9sOD+z1M1x5uu05+8wazjpDehkzxrg8UeRPs9ns41EWX06m5we4Ocaw8obB2a5YEw=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "npm:@ubx/sdk@1"
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:@ubx/sdk@1"
+      ]
+    }
+  }
+}

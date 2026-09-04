@@ -22,12 +22,12 @@ type SnapshotGetResponse_Snapshot struct {
 
 type SnapshotGetResponseConfig struct {
 	NfsSnapshotId any
-	Region any
+	Region        any
 }
 
 type SnapshotGetResponseAttrs struct {
 	NfsSnapshotId any
-	Region any
+	Region        any
 	// Represents an NFS snapshot.
 	Snapshot any
 }
@@ -36,6 +36,6 @@ var SnapshotGetResponse = ubx.DataSourceBinding{
 	WireType: "digitalocean_nfs_snapshot_get_response",
 	Fields: ubx.FieldMap{
 		"NfsSnapshotId": ubx.FieldSpec{WireName: "nfs_snapshot_id"},
-		"Region": ubx.FieldSpec{WireName: "region"},
+		"Region":        ubx.FieldSpec{WireName: "region"},
 	},
 }

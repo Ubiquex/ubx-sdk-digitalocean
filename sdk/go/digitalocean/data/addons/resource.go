@@ -4,23 +4,23 @@ package addons
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Resource_Resources_Metadata struct {
-	Name any
+	Name  any
 	Value any
 }
 
 type Resource_Resources struct {
-	AppName any
-	AppSlug any
-	HasConfig any
-	Message any
-	Metadata any
-	Name any
-	PlanName any
+	AppName           any
+	AppSlug           any
+	HasConfig         any
+	Message           any
+	Metadata          any
+	Name              any
+	PlanName          any
 	PlanPricePerMonth any
-	PlanSlug any
-	SsoUrl any
-	State any
-	Uuid any
+	PlanSlug          any
+	SsoUrl            any
+	State             any
+	Uuid              any
 }
 
 type ResourceConfig struct {
@@ -32,6 +32,5 @@ type ResourceAttrs struct {
 
 var Resource = ubx.DataSourceBinding{
 	WireType: "digitalocean_addons_resource",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

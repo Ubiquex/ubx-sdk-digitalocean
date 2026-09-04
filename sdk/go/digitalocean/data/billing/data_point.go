@@ -4,21 +4,21 @@ package billing
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type DataPoint_DataPoints struct {
-	Description any
+	Description      any
 	GroupDescription any
-	Region any
-	Sku any
-	StartDate any
-	TotalAmount any
-	UsageTeamUrn any
+	Region           any
+	Sku              any
+	StartDate        any
+	TotalAmount      any
+	UsageTeamUrn     any
 }
 
 type DataPointConfig struct {
 	AccountUrn any
-	EndDate any
-	Page any
-	PerPage any
-	StartDate any
+	EndDate    any
+	Page       any
+	PerPage    any
+	StartDate  any
 }
 
 type DataPointAttrs struct {
@@ -27,10 +27,10 @@ type DataPointAttrs struct {
 	CurrentPage any
 	// Array of billing data points, which are day-over-day changes in billing resource usage based on nightly invoice item estimates, for the requested period
 	DataPoints any
-	EndDate any
-	Page any
-	PerPage any
-	StartDate any
+	EndDate    any
+	Page       any
+	PerPage    any
+	StartDate  any
 	// Total number of items available across all pages
 	TotalItems any
 	// Total number of pages available
@@ -41,9 +41,9 @@ var DataPoint = ubx.DataSourceBinding{
 	WireType: "digitalocean_billing_data_point",
 	Fields: ubx.FieldMap{
 		"AccountUrn": ubx.FieldSpec{WireName: "account_urn"},
-		"EndDate": ubx.FieldSpec{WireName: "end_date"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"StartDate": ubx.FieldSpec{WireName: "start_date"},
+		"EndDate":    ubx.FieldSpec{WireName: "end_date"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
+		"StartDate":  ubx.FieldSpec{WireName: "start_date"},
 	},
 }

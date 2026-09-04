@@ -4,38 +4,38 @@ package nfs
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Response_Shares_AccessPoints_AccessPolicy struct {
-	Anongid any
-	Anonuid any
+	Anongid                    any
+	Anonuid                    any
 	IdentityEnforcementEnabled any
-	Protocols any
-	SquashConfig any
+	Protocols                  any
+	SquashConfig               any
 }
 
 type Response_Shares_AccessPoints struct {
 	AccessPolicy any
-	CreatedAt any
-	Id any
-	IsDefault any
-	Name any
-	Path any
-	ShareId any
-	Status any
-	UpdatedAt any
-	VpcId any
+	CreatedAt    any
+	Id           any
+	IsDefault    any
+	Name         any
+	Path         any
+	ShareId      any
+	Status       any
+	UpdatedAt    any
+	VpcId        any
 }
 
 type Response_Shares struct {
-	AccessPoints any
-	CreatedAt any
-	Host any
-	Id any
-	MountPath any
-	Name any
+	AccessPoints    any
+	CreatedAt       any
+	Host            any
+	Id              any
+	MountPath       any
+	Name            any
 	PerformanceTier any
-	Region any
-	SizeGib any
-	Status any
-	VpcIds any
+	Region          any
+	SizeGib         any
+	Status          any
+	VpcIds          any
 }
 
 type ResponseConfig struct {

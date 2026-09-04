@@ -4,6 +4,12 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "digitalocean", "version": "dynamic"}
 
+from .associated_kubernetes_resources import AssociatedKubernetesResources, AssociatedKubernetesResourcesConfig
+from .cluster import Cluster, ClusterConfig
+from .clusterlint_results import ClusterlintResults, ClusterlintResultsConfig
+from .credentials import Credentials, CredentialsConfig
+from .error import Error, ErrorConfig
 from .node_pool import NodePool, NodePoolConfig
 from .options import Options, OptionsConfig
 from .version import Version, VersionConfig
+from .status_messages import StatusMessages, StatusMessagesConfig

@@ -4,24 +4,24 @@ package nfs
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type GetResponse_Share_AccessPoints_AccessPolicy struct {
-	Anongid any
-	Anonuid any
+	Anongid                    any
+	Anonuid                    any
 	IdentityEnforcementEnabled any
-	Protocols any
-	SquashConfig any
+	Protocols                  any
+	SquashConfig               any
 }
 
 type GetResponse_Share_AccessPoints struct {
 	AccessPolicy any
-	CreatedAt any
-	Id any
-	IsDefault any
-	Name any
-	Path any
-	ShareId any
-	Status any
-	UpdatedAt any
-	VpcId any
+	CreatedAt    any
+	Id           any
+	IsDefault    any
+	Name         any
+	Path         any
+	ShareId      any
+	Status       any
+	UpdatedAt    any
+	VpcId        any
 }
 
 type GetResponse_Share struct {
@@ -71,7 +71,7 @@ type GetResponseAttrs struct {
 	PerformanceTier any
 	// The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
 	Region any
-	Share any
+	Share  any
 	// The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
 	SizeGib any
 	// List of VPC IDs that should be able to access the share.
@@ -83,11 +83,11 @@ type GetResponseAttrs struct {
 var GetResponse = ubx.ResourceBinding{
 	WireType: "digitalocean_nfs_get_response",
 	Fields: ubx.FieldMap{
-		"Name": ubx.FieldSpec{WireName: "name"},
+		"Name":            ubx.FieldSpec{WireName: "name"},
 		"PerformanceTier": ubx.FieldSpec{WireName: "performance_tier"},
-		"Region": ubx.FieldSpec{WireName: "region"},
-		"SizeGib": ubx.FieldSpec{WireName: "size_gib"},
-		"VpcIds": ubx.FieldSpec{WireName: "vpc_ids"},
-		"NfsId": ubx.FieldSpec{WireName: "nfs_id"},
+		"Region":          ubx.FieldSpec{WireName: "region"},
+		"SizeGib":         ubx.FieldSpec{WireName: "size_gib"},
+		"VpcIds":          ubx.FieldSpec{WireName: "vpc_ids"},
+		"NfsId":           ubx.FieldSpec{WireName: "nfs_id"},
 	},
 }

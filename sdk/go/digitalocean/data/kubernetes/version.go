@@ -5,7 +5,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Version_AvailableUpgradeVersions struct {
 	KubernetesVersion any
-	Slug any
+	Slug              any
 	SupportedFeatures any
 }
 
@@ -15,7 +15,7 @@ type VersionConfig struct {
 
 type VersionAttrs struct {
 	AvailableUpgradeVersions any
-	ClusterId any
+	ClusterId                any
 }
 
 var Version = ubx.DataSourceBinding{
