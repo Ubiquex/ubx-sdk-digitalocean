@@ -83,7 +83,15 @@
     "kubernetes_cluster": "The Kubernetes cluster's own real, current representation."
   },
   "digitalocean_database": {
-    "database": "The logical database's own real, current representation."
+    "connection": "The real, public connection details (host, port, user, password) for this database cluster.",
+    "database": "The logical database's own real, current representation.",
+    "do_settings": "This database cluster's own, DigitalOcean-managed settings.",
+    "maintenance_window": "This database cluster's own scheduled maintenance window (day and hour).",
+    "private_connection": "The real, private-network connection details (host, port, user, password) for this database cluster.",
+    "rules": "This database cluster's own real firewall rules, restricting which sources may connect.",
+    "standby_connection": "The real, public connection details (host, port, user, password) for this database cluster's own standby node.",
+    "standby_private_connection": "The real, private-network connection details (host, port, user, password) for this database cluster's own standby node.",
+    "users": "This database cluster's own real, provisioned database users."
   },
   "digitalocean_db": {
     "db": "The Kafka schema's own real, current representation."
@@ -142,6 +150,9 @@
     "registry": "The container registry's own real, current representation."
   },
   "digitalocean_replica": {
+    "connection": "The real, public connection details (host, port, user, password) for this database replica.",
+    "do_settings": "This database replica's own, DigitalOcean-managed settings.",
+    "private_connection": "The real, private-network connection details (host, port, user, password) for this database replica.",
     "replica": "The read-only replica's own real, current representation."
   },
   "digitalocean_reserved_ip": {

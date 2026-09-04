@@ -1,6 +1,6 @@
 {
   "name": "@ubx/sdk-digitalocean",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generated TypeScript bindings for digitalocean@dynamic (ubx sdk gen). DO NOT EDIT.",
   "type": "module",
   "dependencies": {
