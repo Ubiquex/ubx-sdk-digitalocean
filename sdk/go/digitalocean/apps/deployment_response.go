@@ -424,6 +424,7 @@ type DeploymentResponse_Deployment struct {
 }
 
 type DeploymentResponseConfig struct {
+	// Whether to force a full rebuild rather than reusing a real, existing cached build. (AI-inferred)
 	ForceBuild any
 	// path parameter, not part of the API's own resource representation
 	AppId any
@@ -432,7 +433,9 @@ type DeploymentResponseConfig struct {
 }
 
 type DeploymentResponseAttrs struct {
+	// The deployment's own real, current representation. (AI-inferred)
 	Deployment any
+	// Whether to force a full rebuild rather than reusing a real, existing cached build. (AI-inferred)
 	ForceBuild any
 	// path parameter, not part of the API's own resource representation
 	AppId any

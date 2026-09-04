@@ -86,6 +86,7 @@ const ApiGetEvaluationTestCaseOutput_EvaluationTestCase_StarMetricFields: FieldM
 };
 
 export interface ApiGetEvaluationTestCaseOutputConfig {
+  /** The real name of the agent workspace this test case is scoped to. (AI-inferred) */
   agentWorkspaceName?: string | Computed<string>;
   /** Dataset against which the test‑case is executed. */
   datasetUuid?: string | Computed<string>;
@@ -95,6 +96,7 @@ export interface ApiGetEvaluationTestCaseOutputConfig {
   metrics?: string[] | Computed<string[]>;
   /** Name of the test case. */
   name?: string | Computed<string>;
+  /** The real, primary metric highlighted for this test case's own results. (AI-inferred) */
   starMetric?: ApiGetEvaluationTestCaseOutput_EvaluationTestCase_StarMetric | Computed<ApiGetEvaluationTestCaseOutput_EvaluationTestCase_StarMetric>;
   /** The workspace uuid. */
   workspaceUuid?: string | Computed<string>;
@@ -103,16 +105,19 @@ export interface ApiGetEvaluationTestCaseOutputConfig {
 }
 
 export interface ApiGetEvaluationTestCaseOutputAttrs {
+  /** The real name of the agent workspace this test case is scoped to. (AI-inferred) */
   agentWorkspaceName: string;
   /** Dataset against which the test‑case is executed. */
   datasetUuid: string;
   /** Description of the test case. */
   description: string;
+  /** The evaluation test case's own real, current representation. (AI-inferred) */
   evaluationTestCase: ApiGetEvaluationTestCaseOutput_EvaluationTestCase;
   /** Full metric list to use for evaluation test case. */
   metrics: string[];
   /** Name of the test case. */
   name: string;
+  /** The real, primary metric highlighted for this test case's own results. (AI-inferred) */
   starMetric: ApiGetEvaluationTestCaseOutput_EvaluationTestCase_StarMetric;
   /** The workspace uuid. */
   workspaceUuid: string;

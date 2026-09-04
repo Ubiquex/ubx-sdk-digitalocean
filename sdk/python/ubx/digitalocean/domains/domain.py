@@ -28,6 +28,7 @@ class DomainConfig:
 
 @dataclasses.dataclass
 class DomainAttrs:
+    # The domain's own real, current representation. (AI-inferred)
     domain: Any = None
     # This optional attribute may contain an IP address. When provided, an A record will be automatically created pointing to the apex domain.
     ip_address: Any = None

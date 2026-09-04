@@ -39,6 +39,7 @@ const Pool_ConnectionFields: FieldMap = {
 };
 
 export interface PoolConfig {
+  /** The real, primary connection details for the pool. (AI-inferred) */
   connection?: Pool_Connection | Computed<Pool_Connection>;
   /** The database for use with the connection pool. */
   db: string | Computed<string>;
@@ -46,10 +47,13 @@ export interface PoolConfig {
   mode: string | Computed<string>;
   /** A unique name for the connection pool. Must be between 3 and 60 characters. */
   name: string | Computed<string>;
+  /** The real connection details for the pool over the cluster's own private network. (AI-inferred) */
   privateConnection?: Pool_Connection | Computed<Pool_Connection>;
   /** The desired size of the PGBouncer connection pool. The maximum allowed size is determined by the size of the cluster's primary node. 25 backend server connections are allowed for every 1GB of RAM. Three are reserved for maintenance. For example, a primary node with 1 GB of RAM allows for a maximum of 22 backend server connections while one with 4 GB would allow for 97. Note that these are shared across all connection pools in a cluster. */
   size: number | Computed<number>;
+  /** The real connection details for the pool's own standby node, if the cluster has one. (AI-inferred) */
   standbyConnection?: Pool_Connection | Computed<Pool_Connection>;
+  /** The real connection details for the pool's own standby node over the cluster's own private network, if the cluster has one. (AI-inferred) */
   standbyPrivateConnection?: Pool_Connection | Computed<Pool_Connection>;
   /** The name of the user for use with the connection pool. When excluded, all sessions connect to the database as the inbound user. */
   user?: string | Computed<string>;
@@ -60,6 +64,7 @@ export interface PoolConfig {
 }
 
 export interface PoolAttrs {
+  /** The real, primary connection details for the pool. (AI-inferred) */
   connection: Pool_Connection;
   /** The database for use with the connection pool. */
   db: string;
@@ -67,11 +72,15 @@ export interface PoolAttrs {
   mode: string;
   /** A unique name for the connection pool. Must be between 3 and 60 characters. */
   name: string;
+  /** The connection pool's own real, current representation. (AI-inferred) */
   pool: Pool_Pool;
+  /** The real connection details for the pool over the cluster's own private network. (AI-inferred) */
   privateConnection: Pool_Connection;
   /** The desired size of the PGBouncer connection pool. The maximum allowed size is determined by the size of the cluster's primary node. 25 backend server connections are allowed for every 1GB of RAM. Three are reserved for maintenance. For example, a primary node with 1 GB of RAM allows for a maximum of 22 backend server connections while one with 4 GB would allow for 97. Note that these are shared across all connection pools in a cluster. */
   size: number;
+  /** The real connection details for the pool's own standby node, if the cluster has one. (AI-inferred) */
   standbyConnection: Pool_Connection;
+  /** The real connection details for the pool's own standby node over the cluster's own private network, if the cluster has one. (AI-inferred) */
   standbyPrivateConnection: Pool_Connection;
   /** The name of the user for use with the connection pool. When excluded, all sessions connect to the database as the inbound user. */
   user: string;

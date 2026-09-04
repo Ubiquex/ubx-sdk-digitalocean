@@ -133,6 +133,7 @@ export interface Reservedipv6Config {
 export interface Reservedipv6Attrs {
   /** The slug identifier for the region the reserved IPv6 will be reserved to. */
   regionSlug: string;
+  /** The reserved IPv6 address's own real, current representation. (AI-inferred) */
   reservedIpv6: Reservedipv6_ReservedIpv6;
   /** path parameter, not part of the API's own resource representation (renamed from "reserved_ipv6": that name is already used by a differently-typed, real response attribute) */
   reservedIpv6Path: string;

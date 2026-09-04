@@ -96,6 +96,7 @@ export interface LoadBalancerConfig {
 }
 
 export interface LoadBalancerAttrs {
+  /** The Load Balancer's own real, current representation. (AI-inferred) */
   loadBalancer: LoadBalancer_LoadBalancer;
   /** path parameter, not part of the API's own resource representation */
   lbId: string;

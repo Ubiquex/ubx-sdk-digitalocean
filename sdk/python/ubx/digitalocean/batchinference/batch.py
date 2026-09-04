@@ -37,10 +37,13 @@ class BatchConfig:
 class BatchAttrs:
     # Unique identifier for the batch job.
     batch_id: Any = None
+    # A time value given in ISO8601 combined date and time format that represents when this batch job was cancelled, if it was. (AI-inferred)
     cancelled_at: Any = None
+    # A time value given in ISO8601 combined date and time format that represents when this batch job completed. (AI-inferred)
     completed_at: Any = None
     # Time window in which the job must complete. Jobs that do not finish in time transition to `expired`.
     completion_window: Any = None
+    # A time value given in ISO8601 combined date and time format that represents when this batch job was created. (AI-inferred)
     created_at: Any = None
     # Inference endpoint each request is dispatched to. **Required when `provider` is `openai` and must match the `url` on every JSONL line. Must be omitted when `provider` is `anthropic`.**
     endpoint: Any = None
@@ -50,10 +53,13 @@ class BatchAttrs:
     errors: Any = None
     # Derived from `created_at` plus `completion_window`.
     expires_at: Any = None
+    # A time value given in ISO8601 combined date and time format that represents when this batch job failed, if it did. (AI-inferred)
     failed_at: Any = None
     # The `file_id` returned by `POST /v1/batches/files`.
     file_id: Any = None
+    # A time value given in ISO8601 combined date and time format that represents when this batch job entered its finalizing state. (AI-inferred)
     finalizing_at: Any = None
+    # A time value given in ISO8601 combined date and time format that represents when this batch job began processing. (AI-inferred)
     in_progress_at: Any = None
     # The uploaded JSONL input file.
     input_file_id: Any = None

@@ -320,6 +320,7 @@ class ClusterAttrs:
     ipv4: Any = None
     # A boolean value indicating whether worker nodes in the cluster are not assigned public IP addresses. When omitted on create, the default value is false. When enabled, a NAT gateway must exist in the VPC where the cluster is created.
     isolated_workers: Any = None
+    # The Kubernetes cluster's own real, current representation. (AI-inferred)
     kubernetes_cluster: Any = None
     # An object specifying the maintenance window policy for the Kubernetes cluster.
     maintenance_policy: Any = None

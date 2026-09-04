@@ -131,6 +131,7 @@ export interface ReservedIpConfig {
 }
 
 export interface ReservedIpAttrs {
+  /** The reserved IP's own real, current representation. (AI-inferred) */
   reservedIp: ReservedIp_ReservedIp;
   /** path parameter, not part of the API's own resource representation (renamed from "reserved_ip": that name is already used by a differently-typed, real response attribute) */
   reservedIpPath: string;

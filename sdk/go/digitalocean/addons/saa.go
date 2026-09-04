@@ -70,6 +70,7 @@ type SaaAttrs struct {
 	Name any
 	// The slug identifier for the plan associated with the resource.
 	PlanSlug any
+	// The add-on association's own real, current representation. (AI-inferred)
 	Resource any
 	// path parameter, not part of the API's own resource representation
 	ResourceUuid any

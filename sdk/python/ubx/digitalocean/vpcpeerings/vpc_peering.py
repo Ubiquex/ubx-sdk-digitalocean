@@ -29,6 +29,7 @@ class VpcPeeringAttrs:
     name: Any = None
     # An array of the two peered VPCs IDs.
     vpc_ids: Any = None
+    # The VPC peering connection's own real, current representation. (AI-inferred)
     vpc_peering: Any = None
     # path parameter, not part of the API's own resource representation
     vpc_peering_id: Any = None

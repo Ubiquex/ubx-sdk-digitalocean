@@ -96,6 +96,7 @@ _Autoscale_AutoscalePool_DropletTemplateFields = {
 class AutoscaleConfig:
     # The scaling configuration for an autoscale pool, which is how the pool scales up and down (either by resource utilization or static configuration).
     config: Any = None
+    # The real Droplet configuration new pool members are created from. (AI-inferred)
     droplet_template: Any = None
     # The human-readable name of the autoscale pool. This field cannot be updated
     name: Any = None
@@ -104,9 +105,11 @@ class AutoscaleConfig:
 
 @dataclasses.dataclass
 class AutoscaleAttrs:
+    # The autoscale pool's own real, current representation. (AI-inferred)
     autoscale_pool: Any = None
     # The scaling configuration for an autoscale pool, which is how the pool scales up and down (either by resource utilization or static configuration).
     config: Any = None
+    # The real Droplet configuration new pool members are created from. (AI-inferred)
     droplet_template: Any = None
     # The human-readable name of the autoscale pool. This field cannot be updated
     name: Any = None

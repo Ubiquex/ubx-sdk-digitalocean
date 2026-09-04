@@ -134,7 +134,8 @@ type Reservedipv6Config struct {
 
 type Reservedipv6Attrs struct {
 	// The slug identifier for the region the reserved IPv6 will be reserved to.
-	RegionSlug   any
+	RegionSlug any
+	// The reserved IPv6 address's own real, current representation. (AI-inferred)
 	ReservedIpv6 any
 	// path parameter, not part of the API's own resource representation (renamed from "reserved_ipv6": that name is already used by a differently-typed, real response attribute)
 	ReservedIpv6Path any

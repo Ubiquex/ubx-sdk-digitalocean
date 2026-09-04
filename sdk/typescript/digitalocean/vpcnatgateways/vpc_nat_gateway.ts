@@ -90,6 +90,7 @@ export interface VpcNatGatewayAttrs {
   type: string;
   /** The UDP timeout in seconds for the VPC NAT gateway. */
   udpTimeoutSeconds: number;
+  /** The VPC NAT gateway's own real, current representation. (AI-inferred) */
   vpcNatGateway: VpcNatGateway_VpcNatGateway;
   /** An array of VPCs associated with the VPC NAT gateway. */
   vpcs: VpcNatGateway_Vpcs[];

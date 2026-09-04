@@ -65,7 +65,8 @@ type SinkAttrs struct {
 	DestinationUuid any
 	// List of resources identified by their URNs.
 	Resources any
-	Sink      any
+	// The sink's own real, current representation. (AI-inferred)
+	Sink any
 	// path parameter, not part of the API's own resource representation
 	SinkUuid any
 }

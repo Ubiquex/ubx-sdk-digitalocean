@@ -102,6 +102,7 @@ class LoadBalancerConfig:
 
 @dataclasses.dataclass
 class LoadBalancerAttrs:
+    # The Load Balancer's own real, current representation. (AI-inferred)
     load_balancer: Any = None
     # path parameter, not part of the API's own resource representation
     lb_id: Any = None

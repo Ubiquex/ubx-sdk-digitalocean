@@ -91,6 +91,7 @@ class NodePoolAttrs:
     min_nodes: Any = None
     # A human-readable name for the node pool.
     name: Any = None
+    # The node pool's own real, current representation. (AI-inferred)
     node_pool: Any = None
     # An object specifying the details of a specific worker node in a node pool.
     nodes: Any = None

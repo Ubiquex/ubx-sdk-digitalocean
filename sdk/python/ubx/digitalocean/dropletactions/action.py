@@ -48,6 +48,7 @@ class ActionConfig:
 
 @dataclasses.dataclass
 class ActionAttrs:
+    # The action's own real, current representation. (AI-inferred)
     action: Any = None
     # path parameter, not part of the API's own resource representation
     droplet_id: Any = None

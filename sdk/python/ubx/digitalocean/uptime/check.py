@@ -32,6 +32,7 @@ class CheckConfig:
 
 @dataclasses.dataclass
 class CheckAttrs:
+    # The Uptime check's own real, current representation. (AI-inferred)
     check: Any = None
     # A boolean value indicating whether the check is enabled/disabled.
     enabled: Any = None

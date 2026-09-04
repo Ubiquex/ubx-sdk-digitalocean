@@ -45,6 +45,7 @@ _Pool_ConnectionFields = {
 
 @dataclasses.dataclass
 class PoolConfig:
+    # The real, primary connection details for the pool. (AI-inferred)
     connection: Any = None
     # The database for use with the connection pool.
     db: Any = None
@@ -52,10 +53,13 @@ class PoolConfig:
     mode: Any = None
     # A unique name for the connection pool. Must be between 3 and 60 characters.
     name: Any = None
+    # The real connection details for the pool over the cluster's own private network. (AI-inferred)
     private_connection: Any = None
     # The desired size of the PGBouncer connection pool. The maximum allowed size is determined by the size of the cluster's primary node. 25 backend server connections are allowed for every 1GB of RAM. Three are reserved for maintenance. For example, a primary node with 1 GB of RAM allows for a maximum of 22 backend server connections while one with 4 GB would allow for 97. Note that these are shared across all connection pools in a cluster.
     size: Any = None
+    # The real connection details for the pool's own standby node, if the cluster has one. (AI-inferred)
     standby_connection: Any = None
+    # The real connection details for the pool's own standby node over the cluster's own private network, if the cluster has one. (AI-inferred)
     standby_private_connection: Any = None
     # The name of the user for use with the connection pool. When excluded, all sessions connect to the database as the inbound user.
     user: Any = None
@@ -66,6 +70,7 @@ class PoolConfig:
 
 @dataclasses.dataclass
 class PoolAttrs:
+    # The real, primary connection details for the pool. (AI-inferred)
     connection: Any = None
     # The database for use with the connection pool.
     db: Any = None
@@ -73,11 +78,15 @@ class PoolAttrs:
     mode: Any = None
     # A unique name for the connection pool. Must be between 3 and 60 characters.
     name: Any = None
+    # The connection pool's own real, current representation. (AI-inferred)
     pool: Any = None
+    # The real connection details for the pool over the cluster's own private network. (AI-inferred)
     private_connection: Any = None
     # The desired size of the PGBouncer connection pool. The maximum allowed size is determined by the size of the cluster's primary node. 25 backend server connections are allowed for every 1GB of RAM. Three are reserved for maintenance. For example, a primary node with 1 GB of RAM allows for a maximum of 22 backend server connections while one with 4 GB would allow for 97. Note that these are shared across all connection pools in a cluster.
     size: Any = None
+    # The real connection details for the pool's own standby node, if the cluster has one. (AI-inferred)
     standby_connection: Any = None
+    # The real connection details for the pool's own standby node over the cluster's own private network, if the cluster has one. (AI-inferred)
     standby_private_connection: Any = None
     # The name of the user for use with the connection pool. When excluded, all sessions connect to the database as the inbound user.
     user: Any = None

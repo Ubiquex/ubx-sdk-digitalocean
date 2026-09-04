@@ -32,6 +32,7 @@ export interface NamespaceConfig {
 export interface NamespaceAttrs {
   /** The namespace's unique name. */
   label: string;
+  /** The Functions namespace's own real, current representation. (AI-inferred) */
   namespace: Namespace_Namespace;
   /** The [datacenter region](https://docs.digitalocean.com/products/platform/availability-matrix/#available-datacenters) in which to create the namespace. */
   region: string;

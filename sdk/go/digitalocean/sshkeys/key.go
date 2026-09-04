@@ -32,7 +32,8 @@ type KeyAttrs struct {
 	Name any
 	// The entire public key string that was uploaded. Embedded into the root user's `authorized_keys` file if you include this key during Droplet creation.
 	PublicKey any
-	SshKey    any
+	// The SSH key's own real, current representation. (AI-inferred)
+	SshKey any
 	// path parameter, not part of the API's own resource representation
 	SshKeyIdentifier any
 }

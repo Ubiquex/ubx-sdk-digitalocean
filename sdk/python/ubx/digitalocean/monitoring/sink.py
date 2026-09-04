@@ -69,6 +69,7 @@ class SinkAttrs:
     destination_uuid: Any = None
     # List of resources identified by their URNs.
     resources: Any = None
+    # The sink's own real, current representation. (AI-inferred)
     sink: Any = None
     # path parameter, not part of the API's own resource representation
     sink_uuid: Any = None

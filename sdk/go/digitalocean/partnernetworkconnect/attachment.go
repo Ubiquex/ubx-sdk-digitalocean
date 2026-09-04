@@ -62,7 +62,8 @@ type AttachmentConfig struct {
 	Bgp any
 	// Bandwidth (in Mbps) of the connection.
 	ConnectionBandwidthInMbps any
-	NaasProvider              any
+	// The real network-as-a-service provider this Partner Network Connect attachment connects through. (AI-inferred)
+	NaasProvider any
 	// The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
 	Name any
 	// Optional associated partner attachment UUID
@@ -82,7 +83,8 @@ type AttachmentAttrs struct {
 	Bgp any
 	// Bandwidth (in Mbps) of the connection.
 	ConnectionBandwidthInMbps any
-	NaasProvider              any
+	// The real network-as-a-service provider this Partner Network Connect attachment connects through. (AI-inferred)
+	NaasProvider any
 	// The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
 	Name any
 	// Optional associated partner attachment UUID

@@ -133,6 +133,7 @@ type FloatingIpConfig struct {
 }
 
 type FloatingIpAttrs struct {
+	// The floating IP's own real, current representation. (AI-inferred)
 	FloatingIp any
 	// path parameter, not part of the API's own resource representation (renamed from "floating_ip": that name is already used by a differently-typed, real response attribute)
 	FloatingIpPath any

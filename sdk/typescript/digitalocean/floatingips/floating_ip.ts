@@ -131,6 +131,7 @@ export interface FloatingIpConfig {
 }
 
 export interface FloatingIpAttrs {
+  /** The floating IP's own real, current representation. (AI-inferred) */
   floatingIp: FloatingIp_FloatingIp;
   /** path parameter, not part of the API's own resource representation (renamed from "floating_ip": that name is already used by a differently-typed, real response attribute) */
   floatingIpPath: string;

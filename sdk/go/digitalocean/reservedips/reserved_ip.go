@@ -133,6 +133,7 @@ type ReservedIpConfig struct {
 }
 
 type ReservedIpAttrs struct {
+	// The reserved IP's own real, current representation. (AI-inferred)
 	ReservedIp any
 	// path parameter, not part of the API's own resource representation (renamed from "reserved_ip": that name is already used by a differently-typed, real response attribute)
 	ReservedIpPath any

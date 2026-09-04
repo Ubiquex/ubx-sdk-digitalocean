@@ -48,6 +48,7 @@ class ByoipPrefixConfig:
 
 @dataclasses.dataclass
 class ByoipPrefixAttrs:
+    # The BYOIP prefix's own real, current representation. (AI-inferred)
     byoip_prefix: Any = None
     # The IP prefix in CIDR notation to bring
     prefix: Any = None

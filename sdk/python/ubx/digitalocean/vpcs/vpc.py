@@ -40,6 +40,7 @@ class VpcAttrs:
     name: Any = None
     # The slug identifier for the region where the VPC will be created.
     region: Any = None
+    # The VPC's own real, current representation. (AI-inferred)
     vpc: Any = None
     # path parameter, not part of the API's own resource representation
     vpc_id: Any = None

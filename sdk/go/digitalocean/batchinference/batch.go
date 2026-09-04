@@ -32,12 +32,15 @@ type BatchConfig struct {
 
 type BatchAttrs struct {
 	// Unique identifier for the batch job.
-	BatchId     any
+	BatchId any
+	// A time value given in ISO8601 combined date and time format that represents when this batch job was cancelled, if it was. (AI-inferred)
 	CancelledAt any
+	// A time value given in ISO8601 combined date and time format that represents when this batch job completed. (AI-inferred)
 	CompletedAt any
 	// Time window in which the job must complete. Jobs that do not finish in time transition to `expired`.
 	CompletionWindow any
-	CreatedAt        any
+	// A time value given in ISO8601 combined date and time format that represents when this batch job was created. (AI-inferred)
+	CreatedAt any
 	// Inference endpoint each request is dispatched to. **Required when `provider` is `openai` and must match the `url` on every JSONL line. Must be omitted when `provider` is `anthropic`.**
 	Endpoint any
 	// Error sidecar file. Null when no errors were produced.
@@ -46,10 +49,13 @@ type BatchAttrs struct {
 	Errors any
 	// Derived from `created_at` plus `completion_window`.
 	ExpiresAt any
-	FailedAt  any
+	// A time value given in ISO8601 combined date and time format that represents when this batch job failed, if it did. (AI-inferred)
+	FailedAt any
 	// The `file_id` returned by `POST /v1/batches/files`.
-	FileId       any
+	FileId any
+	// A time value given in ISO8601 combined date and time format that represents when this batch job entered its finalizing state. (AI-inferred)
 	FinalizingAt any
+	// A time value given in ISO8601 combined date and time format that represents when this batch job began processing. (AI-inferred)
 	InProgressAt any
 	// The uploaded JSONL input file.
 	InputFileId any

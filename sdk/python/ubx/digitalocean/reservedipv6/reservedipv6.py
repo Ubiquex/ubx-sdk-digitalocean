@@ -139,6 +139,7 @@ class Reservedipv6Config:
 class Reservedipv6Attrs:
     # The slug identifier for the region the reserved IPv6 will be reserved to.
     region_slug: Any = None
+    # The reserved IPv6 address's own real, current representation. (AI-inferred)
     reserved_ipv6: Any = None
     # path parameter, not part of the API's own resource representation (renamed from "reserved_ipv6": that name is already used by a differently-typed, real response attribute)
     reserved_ipv6_path: Any = None

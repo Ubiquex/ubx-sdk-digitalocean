@@ -462,7 +462,8 @@ type ApiGetWorkspaceOutputAttrs struct {
 	// Description of the workspace
 	Description any
 	// Name of the workspace
-	Name      any
+	Name any
+	// The workspace's own real, current representation. (AI-inferred)
 	Workspace any
 	// path parameter, not part of the API's own resource representation
 	WorkspaceUuid any

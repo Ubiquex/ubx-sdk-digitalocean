@@ -88,6 +88,7 @@ var ApiGetEvaluationTestCaseOutput_EvaluationTestCase_StarMetricFields = ubx.Fie
 }
 
 type ApiGetEvaluationTestCaseOutputConfig struct {
+	// The real name of the agent workspace this test case is scoped to. (AI-inferred)
 	AgentWorkspaceName any
 	// Dataset against which the test‑case is executed.
 	DatasetUuid any
@@ -96,7 +97,8 @@ type ApiGetEvaluationTestCaseOutputConfig struct {
 	// Full metric list to use for evaluation test case.
 	Metrics any
 	// Name of the test case.
-	Name       any
+	Name any
+	// The real, primary metric highlighted for this test case's own results. (AI-inferred)
 	StarMetric any
 	// The workspace uuid.
 	WorkspaceUuid any
@@ -105,16 +107,19 @@ type ApiGetEvaluationTestCaseOutputConfig struct {
 }
 
 type ApiGetEvaluationTestCaseOutputAttrs struct {
+	// The real name of the agent workspace this test case is scoped to. (AI-inferred)
 	AgentWorkspaceName any
 	// Dataset against which the test‑case is executed.
 	DatasetUuid any
 	// Description of the test case.
-	Description        any
+	Description any
+	// The evaluation test case's own real, current representation. (AI-inferred)
 	EvaluationTestCase any
 	// Full metric list to use for evaluation test case.
 	Metrics any
 	// Name of the test case.
-	Name       any
+	Name any
+	// The real, primary metric highlighted for this test case's own results. (AI-inferred)
 	StarMetric any
 	// The workspace uuid.
 	WorkspaceUuid any

@@ -26,6 +26,7 @@ export interface CheckConfig {
 }
 
 export interface CheckAttrs {
+  /** The Uptime check's own real, current representation. (AI-inferred) */
   check: Check_Check;
   /** A boolean value indicating whether the check is enabled/disabled. */
   enabled: boolean;

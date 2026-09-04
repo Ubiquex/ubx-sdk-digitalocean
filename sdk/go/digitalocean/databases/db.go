@@ -18,6 +18,7 @@ type DbConfig struct {
 }
 
 type DbAttrs struct {
+	// The Kafka schema's own real, current representation. (AI-inferred)
 	Db any
 	// The name of the database.
 	Name any

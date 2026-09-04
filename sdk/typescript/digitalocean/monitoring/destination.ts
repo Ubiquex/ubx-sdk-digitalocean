@@ -66,6 +66,7 @@ const Destination_ConfigFields: FieldMap = {
 };
 
 export interface DestinationConfig {
+  /** The real, type-specific configuration for this sink destination. (AI-inferred) */
   config: Destination_Config | Computed<Destination_Config>;
   /** destination name */
   name?: string | Computed<string>;
@@ -76,7 +77,9 @@ export interface DestinationConfig {
 }
 
 export interface DestinationAttrs {
+  /** The real, type-specific configuration for this sink destination. (AI-inferred) */
   config: Destination_Config;
+  /** The sink destination's own real, current representation. (AI-inferred) */
   destination: Destination_Destination;
   /** destination name */
   name: string;

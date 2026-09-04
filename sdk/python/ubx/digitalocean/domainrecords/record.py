@@ -38,6 +38,7 @@ class RecordConfig:
 
 @dataclasses.dataclass
 class RecordAttrs:
+    # The DNS record's own real, current representation. (AI-inferred)
     domain_record: Any = None
     # path parameter, not part of the API's own resource representation
     domain_name: Any = None

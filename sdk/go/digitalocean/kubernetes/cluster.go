@@ -315,7 +315,8 @@ type ClusterAttrs struct {
 	// The public IPv4 address of the Kubernetes master node. This will not be set if high availability is configured on the cluster (v1.21+)
 	Ipv4 any
 	// A boolean value indicating whether worker nodes in the cluster are not assigned public IP addresses. When omitted on create, the default value is false. When enabled, a NAT gateway must exist in the VPC where the cluster is created.
-	IsolatedWorkers   any
+	IsolatedWorkers any
+	// The Kubernetes cluster's own real, current representation. (AI-inferred)
 	KubernetesCluster any
 	// An object specifying the maintenance window policy for the Kubernetes cluster.
 	MaintenancePolicy any

@@ -117,6 +117,7 @@ export interface UserAttrs {
   /** A string representing the database user's role. The value will be either "primary" or "normal". */
   role: string;
   settings: User_Settings;
+  /** The database user's own real, current representation. (AI-inferred) */
   user: User_User;
   /** path parameter, not part of the API's own resource representation */
   databaseClusterUuid: string;

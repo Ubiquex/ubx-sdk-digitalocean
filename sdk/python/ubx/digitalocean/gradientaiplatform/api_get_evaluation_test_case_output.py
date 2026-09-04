@@ -92,6 +92,7 @@ _ApiGetEvaluationTestCaseOutput_EvaluationTestCase_StarMetricFields = {
 
 @dataclasses.dataclass
 class ApiGetEvaluationTestCaseOutputConfig:
+    # The real name of the agent workspace this test case is scoped to. (AI-inferred)
     agent_workspace_name: Any = None
     # Dataset against which the test‑case is executed.
     dataset_uuid: Any = None
@@ -101,6 +102,7 @@ class ApiGetEvaluationTestCaseOutputConfig:
     metrics: Any = None
     # Name of the test case.
     name: Any = None
+    # The real, primary metric highlighted for this test case's own results. (AI-inferred)
     star_metric: Any = None
     # The workspace uuid.
     workspace_uuid: Any = None
@@ -109,16 +111,19 @@ class ApiGetEvaluationTestCaseOutputConfig:
 
 @dataclasses.dataclass
 class ApiGetEvaluationTestCaseOutputAttrs:
+    # The real name of the agent workspace this test case is scoped to. (AI-inferred)
     agent_workspace_name: Any = None
     # Dataset against which the test‑case is executed.
     dataset_uuid: Any = None
     # Description of the test case.
     description: Any = None
+    # The evaluation test case's own real, current representation. (AI-inferred)
     evaluation_test_case: Any = None
     # Full metric list to use for evaluation test case.
     metrics: Any = None
     # Name of the test case.
     name: Any = None
+    # The real, primary metric highlighted for this test case's own results. (AI-inferred)
     star_metric: Any = None
     # The workspace uuid.
     workspace_uuid: Any = None

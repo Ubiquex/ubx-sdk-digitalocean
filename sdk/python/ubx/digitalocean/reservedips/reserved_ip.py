@@ -137,6 +137,7 @@ class ReservedIpConfig:
 
 @dataclasses.dataclass
 class ReservedIpAttrs:
+    # The reserved IP's own real, current representation. (AI-inferred)
     reserved_ip: Any = None
     # path parameter, not part of the API's own resource representation (renamed from "reserved_ip": that name is already used by a differently-typed, real response attribute)
     reserved_ip_path: Any = None

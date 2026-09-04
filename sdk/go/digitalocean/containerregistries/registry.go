@@ -26,7 +26,8 @@ type RegistryAttrs struct {
 	// A globally unique name for the container registry. Must be lowercase and be composed only of numbers, letters and `-`, up to a limit of 63 characters.
 	Name any
 	// Slug of the region where registry data is stored. When not provided, a region will be selected.
-	Region   any
+	Region any
+	// The container registry's own real, current representation. (AI-inferred)
 	Registry any
 	// The slug of the subscription tier to sign up for. Valid values can be retrieved using the options endpoint.
 	SubscriptionTierSlug any

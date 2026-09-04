@@ -589,9 +589,11 @@ type ApiGetAgentOutputConfig struct {
 	// Ids of the knowledge base(s) to attach to the agent
 	KnowledgeBaseUuid any
 	// MCP (Model Context Protocol) servers to attach to the agent
-	McpServers           any
+	McpServers any
+	// The UUID of the model provider API key this agent uses. (AI-inferred)
 	ModelProviderKeyUuid any
-	ModelRouterUuid      any
+	// The UUID of the model router this agent uses, if configured to route rather than call one model directly. (AI-inferred)
+	ModelRouterUuid any
 	// Identifier for the foundation model.
 	ModelUuid any
 	// Agent name
@@ -599,13 +601,16 @@ type ApiGetAgentOutputConfig struct {
 	// Optional OpenAI API key ID to use with OpenAI models
 	OpenAiKeyUuid any
 	// The id of the DigitalOcean project this agent will belong to
-	ProjectId       any
+	ProjectId any
+	// The real, configured reasoning effort level for models that support it. (AI-inferred)
 	ReasoningEffort any
 	// The DigitalOcean region to deploy your agent in
-	Region           any
+	Region any
+	// The real slug of the model router preset this agent was created from, if any. (AI-inferred)
 	RouterPresetSlug any
 	// Agent tag to organize related resources
-	Tags                any
+	Tags any
+	// The real, configured token budget for extended model reasoning, for models that support it. (AI-inferred)
 	ThinkingTokenBudget any
 	// Whether the agent can use the built-in web_fetch tool to retrieve content from public web pages.
 	WebFetchEnabled any
@@ -629,9 +634,11 @@ type ApiGetAgentOutputAttrs struct {
 	// Ids of the knowledge base(s) to attach to the agent
 	KnowledgeBaseUuid any
 	// MCP (Model Context Protocol) servers to attach to the agent
-	McpServers           any
+	McpServers any
+	// The UUID of the model provider API key this agent uses. (AI-inferred)
 	ModelProviderKeyUuid any
-	ModelRouterUuid      any
+	// The UUID of the model router this agent uses, if configured to route rather than call one model directly. (AI-inferred)
+	ModelRouterUuid any
 	// Identifier for the foundation model.
 	ModelUuid any
 	// Agent name
@@ -639,13 +646,16 @@ type ApiGetAgentOutputAttrs struct {
 	// Optional OpenAI API key ID to use with OpenAI models
 	OpenAiKeyUuid any
 	// The id of the DigitalOcean project this agent will belong to
-	ProjectId       any
+	ProjectId any
+	// The real, configured reasoning effort level for models that support it. (AI-inferred)
 	ReasoningEffort any
 	// The DigitalOcean region to deploy your agent in
-	Region           any
+	Region any
+	// The real slug of the model router preset this agent was created from, if any. (AI-inferred)
 	RouterPresetSlug any
 	// Agent tag to organize related resources
-	Tags                any
+	Tags any
+	// The real, configured token budget for extended model reasoning, for models that support it. (AI-inferred)
 	ThinkingTokenBudget any
 	// Whether the agent can use the built-in web_fetch tool to retrieve content from public web pages.
 	WebFetchEnabled any

@@ -60,6 +60,7 @@ class ImageAttrs:
     description: Any = None
     # The name of a custom image's distribution. Currently, the valid values are `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`, `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`. Any other value will be accepted but ignored, and `Unknown` will be used in its place.
     distribution: Any = None
+    # The image's own real, current representation. (AI-inferred)
     image: Any = None
     # The display name that has been given to an image. This is what is shown in the control panel and is generally a descriptive title for the image in question.
     name: Any = None

@@ -38,6 +38,7 @@ class NamespaceConfig:
 class NamespaceAttrs:
     # The namespace's unique name.
     label: Any = None
+    # The Functions namespace's own real, current representation. (AI-inferred)
     namespace: Any = None
     # The [datacenter region](https://docs.digitalocean.com/products/platform/availability-matrix/#available-datacenters) in which to create the namespace.
     region: Any = None

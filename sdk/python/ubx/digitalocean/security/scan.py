@@ -41,6 +41,7 @@ class ScanConfig:
 
 @dataclasses.dataclass
 class ScanAttrs:
+    # The security scan's own real, current representation. (AI-inferred)
     scan: Any = None
     # path parameter, not part of the API's own resource representation
     scan_id: Any = None

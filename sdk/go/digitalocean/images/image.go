@@ -56,7 +56,8 @@ type ImageAttrs struct {
 	Description any
 	// The name of a custom image's distribution. Currently, the valid values are `Arch Linux`, `CentOS`, `CoreOS`, `Debian`, `Fedora`, `Fedora Atomic`, `FreeBSD`, `Gentoo`, `openSUSE`, `RancherOS`, `Rocky Linux`, `Ubuntu`, and `Unknown`. Any other value will be accepted but ignored, and `Unknown` will be used in its place.
 	Distribution any
-	Image        any
+	// The image's own real, current representation. (AI-inferred)
+	Image any
 	// The display name that has been given to an image. This is what is shown in the control panel and is generally a descriptive title for the image in question.
 	Name any
 	// The slug identifier for the region where the resource will initially be available.

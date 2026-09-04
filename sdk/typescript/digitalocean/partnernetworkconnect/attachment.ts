@@ -60,6 +60,7 @@ export interface AttachmentConfig {
   bgp?: Attachment_Bgp | Computed<Attachment_Bgp>;
   /** Bandwidth (in Mbps) of the connection. */
   connectionBandwidthInMbps: number | Computed<number>;
+  /** The real network-as-a-service provider this Partner Network Connect attachment connects through. (AI-inferred) */
   naasProvider: string | Computed<string>;
   /** The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods. */
   name: string | Computed<string>;
@@ -80,6 +81,7 @@ export interface AttachmentAttrs {
   bgp: Attachment_Bgp;
   /** Bandwidth (in Mbps) of the connection. */
   connectionBandwidthInMbps: number;
+  /** The real network-as-a-service provider this Partner Network Connect attachment connects through. (AI-inferred) */
   naasProvider: string;
   /** The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods. */
   name: string;

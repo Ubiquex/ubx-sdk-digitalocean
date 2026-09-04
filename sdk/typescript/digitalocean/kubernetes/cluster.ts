@@ -314,6 +314,7 @@ export interface ClusterAttrs {
   ipv4: string;
   /** A boolean value indicating whether worker nodes in the cluster are not assigned public IP addresses. When omitted on create, the default value is false. When enabled, a NAT gateway must exist in the VPC where the cluster is created. */
   isolatedWorkers: boolean;
+  /** The Kubernetes cluster's own real, current representation. (AI-inferred) */
   kubernetesCluster: Cluster_KubernetesCluster;
   /** An object specifying the maintenance window policy for the Kubernetes cluster. */
   maintenancePolicy: Cluster_KubernetesCluster_MaintenancePolicy;

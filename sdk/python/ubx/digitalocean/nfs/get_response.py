@@ -75,6 +75,7 @@ class GetResponseAttrs:
     performance_tier: Any = None
     # The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
     region: Any = None
+    # The NFS share's own real, current representation. (AI-inferred)
     share: Any = None
     # The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
     size_gib: Any = None

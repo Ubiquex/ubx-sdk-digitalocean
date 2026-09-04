@@ -44,6 +44,7 @@ type ByoipPrefixConfig struct {
 }
 
 type ByoipPrefixAttrs struct {
+	// The BYOIP prefix's own real, current representation. (AI-inferred)
 	ByoipPrefix any
 	// The IP prefix in CIDR notation to bring
 	Prefix any

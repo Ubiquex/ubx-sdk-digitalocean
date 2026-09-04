@@ -78,6 +78,7 @@ export interface TriggerAttrs {
   name: string;
   /** Trigger details for SCHEDULED type, where body is optional. */
   scheduledDetails: Trigger_ScheduledDetails;
+  /** The Functions trigger's own real, current representation. (AI-inferred) */
   trigger: Trigger_Trigger;
   /** One of different type of triggers. Currently only SCHEDULED is supported. */
   type: string;

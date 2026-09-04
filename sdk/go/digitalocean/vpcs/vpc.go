@@ -36,7 +36,8 @@ type VpcAttrs struct {
 	Name any
 	// The slug identifier for the region where the VPC will be created.
 	Region any
-	Vpc    any
+	// The VPC's own real, current representation. (AI-inferred)
+	Vpc any
 	// path parameter, not part of the API's own resource representation
 	VpcId any
 }

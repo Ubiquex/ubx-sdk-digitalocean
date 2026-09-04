@@ -33,7 +33,8 @@ type NamespaceConfig struct {
 
 type NamespaceAttrs struct {
 	// The namespace's unique name.
-	Label     any
+	Label any
+	// The Functions namespace's own real, current representation. (AI-inferred)
 	Namespace any
 	// The [datacenter region](https://docs.digitalocean.com/products/platform/availability-matrix/#available-datacenters) in which to create the namespace.
 	Region any

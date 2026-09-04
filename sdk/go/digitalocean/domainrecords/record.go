@@ -34,6 +34,7 @@ type RecordConfig struct {
 }
 
 type RecordAttrs struct {
+	// The DNS record's own real, current representation. (AI-inferred)
 	DomainRecord any
 	// path parameter, not part of the API's own resource representation
 	DomainName any

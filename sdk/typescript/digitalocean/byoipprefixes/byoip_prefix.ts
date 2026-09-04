@@ -42,6 +42,7 @@ export interface ByoipPrefixConfig {
 }
 
 export interface ByoipPrefixAttrs {
+  /** The BYOIP prefix's own real, current representation. (AI-inferred) */
   byoipPrefix: ByoipPrefix_ByoipPrefix;
   /** The IP prefix in CIDR notation to bring */
   prefix: string;

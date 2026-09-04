@@ -22,6 +22,7 @@ class DbConfig:
 
 @dataclasses.dataclass
 class DbAttrs:
+    # The Kafka schema's own real, current representation. (AI-inferred)
     db: Any = None
     # The name of the database.
     name: Any = None

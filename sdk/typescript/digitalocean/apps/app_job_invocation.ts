@@ -40,14 +40,21 @@ export interface AppJobInvocationConfig {
 }
 
 export interface AppJobInvocationAttrs {
+  /** A time value given in ISO8601 combined date and time format that represents when this job invocation completed. (AI-inferred) */
   completedAt: string;
+  /** A time value given in ISO8601 combined date and time format that represents when this was created. (AI-inferred) */
   createdAt: string;
+  /** The ID of the deployment this job invocation ran under. (AI-inferred) */
   deploymentId: string;
+  /** A unique ID for this job invocation. (AI-inferred) */
   id: string;
+  /** The real name of the job component that was invoked. (AI-inferred) */
   jobName: string;
   /** The phase of the job invocation */
   phase: string;
+  /** A time value given in ISO8601 combined date and time format that represents when this job invocation started. (AI-inferred) */
   startedAt: string;
+  /** The real event that triggered this job invocation. (AI-inferred) */
   trigger: AppJobInvocation_Trigger;
   /** path parameter, not part of the API's own resource representation */
   appId: string;

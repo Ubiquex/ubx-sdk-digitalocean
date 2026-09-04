@@ -50,6 +50,7 @@ type FirewallConfig struct {
 }
 
 type FirewallAttrs struct {
+	// The firewall's own real, current representation. (AI-inferred)
 	Firewall any
 	// path parameter, not part of the API's own resource representation
 	FirewallId any

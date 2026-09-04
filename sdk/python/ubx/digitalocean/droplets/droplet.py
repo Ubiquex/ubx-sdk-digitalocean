@@ -166,6 +166,7 @@ class DropletConfig:
 
 @dataclasses.dataclass
 class DropletAttrs:
+    # The Droplet's own real, current representation. (AI-inferred)
     droplet: Any = None
     # path parameter, not part of the API's own resource representation
     droplet_id: Any = None

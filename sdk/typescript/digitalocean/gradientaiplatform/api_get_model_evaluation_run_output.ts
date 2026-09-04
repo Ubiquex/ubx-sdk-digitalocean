@@ -277,12 +277,15 @@ export interface ApiGetModelEvaluationRunOutputConfig {
   candidateModelUuid?: string | Computed<string>;
   /** UUID of the dataset to use for evaluation. */
   datasetUuid?: string | Computed<string>;
+  /** The UUID of the evaluation preset this run was executed with, if any. (AI-inferred) */
   evalPresetUuid?: string | Computed<string>;
   /** UUID of the judge model used to score responses. */
   judgeModelUuid?: string | Computed<string>;
   /** UUIDs of metrics to evaluate (selected from ListModelEvaluationMetrics). */
   metricUuids?: string[] | Computed<string[]>;
+  /** A real, human-readable name for the evaluation run. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The real name of the evaluation preset this run was executed with, if any. (AI-inferred) */
   presetName?: string | Computed<string>;
   /** Which sections of this run's resolved configuration to persist as a reusable preset. Each selected section saves only its own fields; the remaining sections stay empty on the preset and must be supplied inline on future runs that reference it. Empty means do not save a preset (unless the deprecated `save_as_preset` boolean is true, in which case all sections are saved). Ignored when `eval_preset_uuid` is set. Use `preset_name` to label the saved preset. */
   presetSaveSections?: string[] | Computed<string[]>;
@@ -290,6 +293,7 @@ export interface ApiGetModelEvaluationRunOutputConfig {
   saveAsPreset?: boolean | Computed<boolean>;
   /** Source of the run creation (api, sdk, cli). */
   source?: string | Computed<string>;
+  /** The real, primary metric highlighted for this run's own results. (AI-inferred) */
   starMetric?: ApiGetModelEvaluationRunOutput_Run_StarMetric | Computed<ApiGetModelEvaluationRunOutput_Run_StarMetric>;
   /** path parameter, not part of the API's own resource representation */
   evalRunUuid: string | Computed<string>;
@@ -306,6 +310,7 @@ export interface ApiGetModelEvaluationRunOutputAttrs {
   candidateModelUuid: string;
   /** UUID of the dataset to use for evaluation. */
   datasetUuid: string;
+  /** The UUID of the evaluation preset this run was executed with, if any. (AI-inferred) */
   evalPresetUuid: string;
   /** UUID of the judge model used to score responses. */
   judgeModelUuid: string;
@@ -315,7 +320,9 @@ export interface ApiGetModelEvaluationRunOutputAttrs {
   meta: ApiGetModelEvaluationRunOutput_Meta;
   /** UUIDs of metrics to evaluate (selected from ListModelEvaluationMetrics). */
   metricUuids: string[];
+  /** A real, human-readable name for the evaluation run. (AI-inferred) */
   name: string;
+  /** The real name of the evaluation preset this run was executed with, if any. (AI-inferred) */
   presetName: string;
   /** Which sections of this run's resolved configuration to persist as a reusable preset. Each selected section saves only its own fields; the remaining sections stay empty on the preset and must be supplied inline on future runs that reference it. Empty means do not save a preset (unless the deprecated `save_as_preset` boolean is true, in which case all sections are saved). Ignored when `eval_preset_uuid` is set. Use `preset_name` to label the saved preset. */
   presetSaveSections: string[];
@@ -327,6 +334,7 @@ export interface ApiGetModelEvaluationRunOutputAttrs {
   saveAsPreset: boolean;
   /** Source of the run creation (api, sdk, cli). */
   source: string;
+  /** The real, primary metric highlighted for this run's own results. (AI-inferred) */
   starMetric: ApiGetModelEvaluationRunOutput_Run_StarMetric;
   /** path parameter, not part of the API's own resource representation */
   evalRunUuid: string;

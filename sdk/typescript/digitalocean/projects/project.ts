@@ -42,6 +42,7 @@ export interface ProjectAttrs {
   ownerId: number;
   /** The unique universal identifier of the project owner. */
   ownerUuid: string;
+  /** The project's own real, current representation. (AI-inferred) */
   project: Project_Project;
   /** The purpose of the project. The maximum length is 255 characters. It can have one of the following values: - Just trying out DigitalOcean - Class project / Educational purposes - Website or blog - Web Application - Service or API - Mobile Application - Machine learning / AI / Data processing - IoT - Operational / Developer tooling If another value for purpose is specified, for example, "your custom purpose", your purpose will be stored as `Other: your custom purpose`. */
   purpose: string;

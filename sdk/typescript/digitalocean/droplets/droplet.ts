@@ -160,6 +160,7 @@ export interface DropletConfig {
 }
 
 export interface DropletAttrs {
+  /** The Droplet's own real, current representation. (AI-inferred) */
   droplet: Droplet_Droplet;
   /** path parameter, not part of the API's own resource representation */
   dropletId: string;

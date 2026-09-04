@@ -63,6 +63,7 @@ export interface SinkAttrs {
   destinationUuid: string;
   /** List of resources identified by their URNs. */
   resources: Sink_Resources[];
+  /** The sink's own real, current representation. (AI-inferred) */
   sink: Sink_Sink;
   /** path parameter, not part of the API's own resource representation */
   sinkUuid: string;

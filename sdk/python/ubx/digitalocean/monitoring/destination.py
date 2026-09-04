@@ -72,6 +72,7 @@ _Destination_ConfigFields = {
 
 @dataclasses.dataclass
 class DestinationConfig:
+    # The real, type-specific configuration for this sink destination. (AI-inferred)
     config: Any = None
     # destination name
     name: Any = None
@@ -82,7 +83,9 @@ class DestinationConfig:
 
 @dataclasses.dataclass
 class DestinationAttrs:
+    # The real, type-specific configuration for this sink destination. (AI-inferred)
     config: Any = None
+    # The sink destination's own real, current representation. (AI-inferred)
     destination: Any = None
     # destination name
     name: Any = None

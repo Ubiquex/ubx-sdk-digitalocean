@@ -60,10 +60,13 @@ _Replica_DoSettingsFields = {
 
 @dataclasses.dataclass
 class ReplicaConfig:
+    # The real, public connection details (host, port, user, password) for this database replica. (AI-inferred)
     connection: Any = None
+    # This database replica's own, DigitalOcean-managed settings. (AI-inferred)
     do_settings: Any = None
     # The name to give the read-only replicating
     name: Any = None
+    # The real, private-network connection details (host, port, user, password) for this database replica. (AI-inferred)
     private_connection: Any = None
     # A string specifying the UUID of the VPC to which the read-only replica will be assigned. If excluded, the replica will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
     private_network_uuid: Any = None
@@ -82,19 +85,23 @@ class ReplicaConfig:
 
 @dataclasses.dataclass
 class ReplicaAttrs:
+    # The real, public connection details (host, port, user, password) for this database replica. (AI-inferred)
     connection: Any = None
     # A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
     created_at: Any = None
+    # This database replica's own, DigitalOcean-managed settings. (AI-inferred)
     do_settings: Any = None
     # A unique ID that can be used to identify and reference a database replica.
     id: Any = None
     # The name to give the read-only replicating
     name: Any = None
+    # The real, private-network connection details (host, port, user, password) for this database replica. (AI-inferred)
     private_connection: Any = None
     # A string specifying the UUID of the VPC to which the read-only replica will be assigned. If excluded, the replica will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
     private_network_uuid: Any = None
     # A slug identifier for the region where the read-only replica will be located. If excluded, the replica will be placed in the same region as the cluster.
     region: Any = None
+    # The read-only replica's own real, current representation. (AI-inferred)
     replica: Any = None
     # A slug identifier representing the size of the node for the read-only replica. The size of the replica must be at least as large as the node size for the database cluster from which it is replicating.
     size: Any = None
