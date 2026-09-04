@@ -595,7 +595,9 @@ class ApiGetAgentOutputConfig:
     knowledge_base_uuid: Any = None
     # MCP (Model Context Protocol) servers to attach to the agent
     mcp_servers: Any = None
+    # The UUID of the model provider API key this agent uses. (AI-inferred)
     model_provider_key_uuid: Any = None
+    # The UUID of the model router this agent uses, if configured to route rather than call one model directly. (AI-inferred)
     model_router_uuid: Any = None
     # Identifier for the foundation model.
     model_uuid: Any = None
@@ -605,12 +607,15 @@ class ApiGetAgentOutputConfig:
     open_ai_key_uuid: Any = None
     # The id of the DigitalOcean project this agent will belong to
     project_id: Any = None
+    # The real, configured reasoning effort level for models that support it. (AI-inferred)
     reasoning_effort: Any = None
     # The DigitalOcean region to deploy your agent in
     region: Any = None
+    # The real slug of the model router preset this agent was created from, if any. (AI-inferred)
     router_preset_slug: Any = None
     # Agent tag to organize related resources
     tags: Any = None
+    # The real, configured token budget for extended model reasoning, for models that support it. (AI-inferred)
     thinking_token_budget: Any = None
     # Whether the agent can use the built-in web_fetch tool to retrieve content from public web pages.
     web_fetch_enabled: Any = None
@@ -635,7 +640,9 @@ class ApiGetAgentOutputAttrs:
     knowledge_base_uuid: Any = None
     # MCP (Model Context Protocol) servers to attach to the agent
     mcp_servers: Any = None
+    # The UUID of the model provider API key this agent uses. (AI-inferred)
     model_provider_key_uuid: Any = None
+    # The UUID of the model router this agent uses, if configured to route rather than call one model directly. (AI-inferred)
     model_router_uuid: Any = None
     # Identifier for the foundation model.
     model_uuid: Any = None
@@ -645,12 +652,15 @@ class ApiGetAgentOutputAttrs:
     open_ai_key_uuid: Any = None
     # The id of the DigitalOcean project this agent will belong to
     project_id: Any = None
+    # The real, configured reasoning effort level for models that support it. (AI-inferred)
     reasoning_effort: Any = None
     # The DigitalOcean region to deploy your agent in
     region: Any = None
+    # The real slug of the model router preset this agent was created from, if any. (AI-inferred)
     router_preset_slug: Any = None
     # Agent tag to organize related resources
     tags: Any = None
+    # The real, configured token budget for extended model reasoning, for models that support it. (AI-inferred)
     thinking_token_budget: Any = None
     # Whether the agent can use the built-in web_fetch tool to retrieve content from public web pages.
     web_fetch_enabled: Any = None

@@ -56,10 +56,13 @@ var Replica_DoSettingsFields = ubx.FieldMap{
 }
 
 type ReplicaConfig struct {
+	// The real, public connection details (host, port, user, password) for this database replica. (AI-inferred)
 	Connection any
+	// This database replica's own, DigitalOcean-managed settings. (AI-inferred)
 	DoSettings any
 	// The name to give the read-only replicating
-	Name              any
+	Name any
+	// The real, private-network connection details (host, port, user, password) for this database replica. (AI-inferred)
 	PrivateConnection any
 	// A string specifying the UUID of the VPC to which the read-only replica will be assigned. If excluded, the replica will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
 	PrivateNetworkUuid any
@@ -78,19 +81,23 @@ type ReplicaConfig struct {
 }
 
 type ReplicaAttrs struct {
+	// The real, public connection details (host, port, user, password) for this database replica. (AI-inferred)
 	Connection any
 	// A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
-	CreatedAt  any
+	CreatedAt any
+	// This database replica's own, DigitalOcean-managed settings. (AI-inferred)
 	DoSettings any
 	// A unique ID that can be used to identify and reference a database replica.
 	Id any
 	// The name to give the read-only replicating
-	Name              any
+	Name any
+	// The real, private-network connection details (host, port, user, password) for this database replica. (AI-inferred)
 	PrivateConnection any
 	// A string specifying the UUID of the VPC to which the read-only replica will be assigned. If excluded, the replica will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
 	PrivateNetworkUuid any
 	// A slug identifier for the region where the read-only replica will be located. If excluded, the replica will be placed in the same region as the cluster.
-	Region  any
+	Region any
+	// The read-only replica's own real, current representation. (AI-inferred)
 	Replica any
 	// A slug identifier representing the size of the node for the read-only replica. The size of the replica must be at least as large as the node size for the database cluster from which it is replicating.
 	Size any

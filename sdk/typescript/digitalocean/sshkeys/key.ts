@@ -30,6 +30,7 @@ export interface KeyAttrs {
   name: string;
   /** The entire public key string that was uploaded. Embedded into the root user's `authorized_keys` file if you include this key during Droplet creation. */
   publicKey: string;
+  /** The SSH key's own real, current representation. (AI-inferred) */
   sshKey: Key_SshKey;
   /** path parameter, not part of the API's own resource representation */
   sshKeyIdentifier: string;

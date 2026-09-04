@@ -54,10 +54,13 @@ const Replica_DoSettingsFields: FieldMap = {
 };
 
 export interface ReplicaConfig {
+  /** The real, public connection details (host, port, user, password) for this database replica. (AI-inferred) */
   connection?: Replica_Connection | Computed<Replica_Connection>;
+  /** This database replica's own, DigitalOcean-managed settings. (AI-inferred) */
   doSettings?: Replica_DoSettings | Computed<Replica_DoSettings>;
   /** The name to give the read-only replicating */
   name: string | Computed<string>;
+  /** The real, private-network connection details (host, port, user, password) for this database replica. (AI-inferred) */
   privateConnection?: Replica_Connection | Computed<Replica_Connection>;
   /** A string specifying the UUID of the VPC to which the read-only replica will be assigned. If excluded, the replica will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope. */
   privateNetworkUuid?: string | Computed<string>;
@@ -76,19 +79,23 @@ export interface ReplicaConfig {
 }
 
 export interface ReplicaAttrs {
+  /** The real, public connection details (host, port, user, password) for this database replica. (AI-inferred) */
   connection: Replica_Connection;
   /** A time value given in ISO8601 combined date and time format that represents when the database cluster was created. */
   createdAt: string;
+  /** This database replica's own, DigitalOcean-managed settings. (AI-inferred) */
   doSettings: Replica_DoSettings;
   /** A unique ID that can be used to identify and reference a database replica. */
   id: string;
   /** The name to give the read-only replicating */
   name: string;
+  /** The real, private-network connection details (host, port, user, password) for this database replica. (AI-inferred) */
   privateConnection: Replica_Connection;
   /** A string specifying the UUID of the VPC to which the read-only replica will be assigned. If excluded, the replica will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope. */
   privateNetworkUuid: string;
   /** A slug identifier for the region where the read-only replica will be located. If excluded, the replica will be placed in the same region as the cluster. */
   region: string;
+  /** The read-only replica's own real, current representation. (AI-inferred) */
   replica: Replica_Replica;
   /** A slug identifier representing the size of the node for the read-only replica. The size of the replica must be at least as large as the node size for the database cluster from which it is replicating. */
   size: string;

@@ -468,6 +468,7 @@ class ApiGetWorkspaceOutputAttrs:
     description: Any = None
     # Name of the workspace
     name: Any = None
+    # The workspace's own real, current representation. (AI-inferred)
     workspace: Any = None
     # path parameter, not part of the API's own resource representation
     workspace_uuid: Any = None

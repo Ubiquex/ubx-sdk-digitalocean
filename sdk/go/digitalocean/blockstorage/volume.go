@@ -30,6 +30,7 @@ type VolumeConfig struct {
 }
 
 type VolumeAttrs struct {
+	// The Block Storage volume's own real, current representation. (AI-inferred)
 	Volume any
 	// path parameter, not part of the API's own resource representation
 	VolumeId any

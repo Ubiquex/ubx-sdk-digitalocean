@@ -84,6 +84,7 @@ class TopicConfig:
 
 @dataclasses.dataclass
 class TopicAttrs:
+    # The Kafka topic's own real, current representation. (AI-inferred)
     topic: Any = None
     # path parameter, not part of the API's own resource representation
     database_cluster_uuid: Any = None

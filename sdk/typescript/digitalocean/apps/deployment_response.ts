@@ -422,6 +422,7 @@ export interface DeploymentResponse_Deployment {
 }
 
 export interface DeploymentResponseConfig {
+  /** Whether to force a full rebuild rather than reusing a real, existing cached build. (AI-inferred) */
   forceBuild?: boolean | Computed<boolean>;
   /** path parameter, not part of the API's own resource representation */
   appId: string | Computed<string>;
@@ -430,7 +431,9 @@ export interface DeploymentResponseConfig {
 }
 
 export interface DeploymentResponseAttrs {
+  /** The deployment's own real, current representation. (AI-inferred) */
   deployment: DeploymentResponse_Deployment;
+  /** Whether to force a full rebuild rather than reusing a real, existing cached build. (AI-inferred) */
   forceBuild: boolean;
   /** path parameter, not part of the API's own resource representation */
   appId: string;

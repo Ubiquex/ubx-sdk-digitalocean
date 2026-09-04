@@ -86,7 +86,8 @@ type NodePoolAttrs struct {
 	// The minimum number of nodes that this node pool can be auto-scaled to. The value will be `0` if `auto_scale` is set to `false`.
 	MinNodes any
 	// A human-readable name for the node pool.
-	Name     any
+	Name any
+	// The node pool's own real, current representation. (AI-inferred)
 	NodePool any
 	// An object specifying the details of a specific worker node in a node pool.
 	Nodes any

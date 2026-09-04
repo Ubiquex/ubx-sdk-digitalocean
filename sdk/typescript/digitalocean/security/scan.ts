@@ -35,6 +35,7 @@ export interface ScanConfig {
 }
 
 export interface ScanAttrs {
+  /** The security scan's own real, current representation. (AI-inferred) */
   scan: Scan_Scan;
   /** path parameter, not part of the API's own resource representation */
   scanId: string;

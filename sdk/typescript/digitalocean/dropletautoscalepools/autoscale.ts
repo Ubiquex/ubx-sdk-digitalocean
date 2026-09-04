@@ -90,6 +90,7 @@ const Autoscale_AutoscalePool_DropletTemplateFields: FieldMap = {
 export interface AutoscaleConfig {
   /** The scaling configuration for an autoscale pool, which is how the pool scales up and down (either by resource utilization or static configuration). */
   config: Autoscale_AutoscalePool_Config | Computed<Autoscale_AutoscalePool_Config>;
+  /** The real Droplet configuration new pool members are created from. (AI-inferred) */
   dropletTemplate: Autoscale_AutoscalePool_DropletTemplate | Computed<Autoscale_AutoscalePool_DropletTemplate>;
   /** The human-readable name of the autoscale pool. This field cannot be updated */
   name: string | Computed<string>;
@@ -98,9 +99,11 @@ export interface AutoscaleConfig {
 }
 
 export interface AutoscaleAttrs {
+  /** The autoscale pool's own real, current representation. (AI-inferred) */
   autoscalePool: Autoscale_AutoscalePool;
   /** The scaling configuration for an autoscale pool, which is how the pool scales up and down (either by resource utilization or static configuration). */
   config: Autoscale_AutoscalePool_Config;
+  /** The real Droplet configuration new pool members are created from. (AI-inferred) */
   dropletTemplate: Autoscale_AutoscalePool_DropletTemplate;
   /** The human-readable name of the autoscale pool. This field cannot be updated */
   name: string;

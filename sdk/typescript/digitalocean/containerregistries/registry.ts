@@ -25,6 +25,7 @@ export interface RegistryAttrs {
   name: string;
   /** Slug of the region where registry data is stored. When not provided, a region will be selected. */
   region: string;
+  /** The container registry's own real, current representation. (AI-inferred) */
   registry: Registry_Registry;
   /** The slug of the subscription tier to sign up for. Valid values can be retrieved using the options endpoint. */
   subscriptionTierSlug: string;

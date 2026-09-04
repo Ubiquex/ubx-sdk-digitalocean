@@ -28,6 +28,7 @@ type CertificateConfig struct {
 }
 
 type CertificateAttrs struct {
+	// The certificate's own real, current representation. (AI-inferred)
 	Certificate any
 	// path parameter, not part of the API's own resource representation
 	CertificateId any

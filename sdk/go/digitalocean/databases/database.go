@@ -214,15 +214,19 @@ type DatabaseConfig struct {
 	// Autoscaling configuration for the database cluster. Currently only supports storage autoscaling. If null, autoscaling is not configured for the cluster.
 	Autoscale     any
 	BackupRestore any
-	Connection    any
-	DoSettings    any
+	// The real, public connection details (host, port, user, password) for this database cluster. (AI-inferred)
+	Connection any
+	// This database cluster's own, DigitalOcean-managed settings. (AI-inferred)
+	DoSettings any
 	// A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, "valkey" for Valkey, "advanced_pg" for PostgreSQL Advanced Edition, and "advanced_mysql" for MySQL Advanced Edition. Advanced Edition engines are currently in public preview.
-	Engine            any
+	Engine any
+	// This database cluster's own scheduled maintenance window (day and hour). (AI-inferred)
 	MaintenanceWindow any
 	// A unique, human-readable name referring to a database cluster.
 	Name any
 	// The number of nodes in the database cluster.
-	NumNodes          any
+	NumNodes any
+	// The real, private-network connection details (host, port, user, password) for this database cluster. (AI-inferred)
 	PrivateConnection any
 	// A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
 	PrivateNetworkUuid any
@@ -230,12 +234,15 @@ type DatabaseConfig struct {
 	ProjectId any
 	// The slug identifier for the region where the database cluster is located.
 	Region any
-	Rules  any
+	// This database cluster's own real firewall rules, restricting which sources may connect. (AI-inferred)
+	Rules any
 	// The connection details for Schema Registry.
 	SchemaRegistryConnection any
 	// The slug identifier representing the size of the nodes in the database cluster.
-	Size                     any
-	StandbyConnection        any
+	Size any
+	// The real, public connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred)
+	StandbyConnection any
+	// The real, private-network connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred)
 	StandbyPrivateConnection any
 	// Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
 	StorageSizeMib any
@@ -253,24 +260,29 @@ type DatabaseAttrs struct {
 	// Autoscaling configuration for the database cluster. Currently only supports storage autoscaling. If null, autoscaling is not configured for the cluster.
 	Autoscale     any
 	BackupRestore any
-	Connection    any
+	// The real, public connection details (host, port, user, password) for this database cluster. (AI-inferred)
+	Connection any
 	// A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
 	CreatedAt any
-	Database  any
+	// The logical database's own real, current representation. (AI-inferred)
+	Database any
 	// An array of strings containing the names of databases created in the database cluster.
-	DbNames    any
+	DbNames any
+	// This database cluster's own, DigitalOcean-managed settings. (AI-inferred)
 	DoSettings any
 	// A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, "valkey" for Valkey, "advanced_pg" for PostgreSQL Advanced Edition, and "advanced_mysql" for MySQL Advanced Edition. Advanced Edition engines are currently in public preview.
 	Engine any
 	// A unique ID that can be used to identify and reference a database cluster.
-	Id                any
+	Id any
+	// This database cluster's own scheduled maintenance window (day and hour). (AI-inferred)
 	MaintenanceWindow any
 	// Public hostname and port of the cluster's metrics endpoint(s). Includes one record for the cluster's primary node and a second entry for the cluster's standby node(s).
 	MetricsEndpoints any
 	// A unique, human-readable name referring to a database cluster.
 	Name any
 	// The number of nodes in the database cluster.
-	NumNodes          any
+	NumNodes any
+	// The real, private-network connection details (host, port, user, password) for this database cluster. (AI-inferred)
 	PrivateConnection any
 	// A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
 	PrivateNetworkUuid any
@@ -278,14 +290,17 @@ type DatabaseAttrs struct {
 	ProjectId any
 	// The slug identifier for the region where the database cluster is located.
 	Region any
-	Rules  any
+	// This database cluster's own real firewall rules, restricting which sources may connect. (AI-inferred)
+	Rules any
 	// The connection details for Schema Registry.
 	SchemaRegistryConnection any
 	// A string representing the semantic version of the database engine in use for the cluster.
 	SemanticVersion any
 	// The slug identifier representing the size of the nodes in the database cluster.
-	Size                     any
-	StandbyConnection        any
+	Size any
+	// The real, public connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred)
+	StandbyConnection any
+	// The real, private-network connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred)
 	StandbyPrivateConnection any
 	// A string representing the current status of the database cluster.
 	Status any
@@ -295,7 +310,8 @@ type DatabaseAttrs struct {
 	Tags any
 	// The connection details for OpenSearch dashboard.
 	UiConnection any
-	Users        any
+	// This database cluster's own real, provisioned database users. (AI-inferred)
+	Users any
 	// A string representing the version of the database engine in use for the cluster.
 	Version any
 	// A timestamp referring to the date when the particular version will no longer be available for creating new clusters. If null, the version does not have an end of availability timeline.

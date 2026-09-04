@@ -84,6 +84,7 @@ class TriggerAttrs:
     name: Any = None
     # Trigger details for SCHEDULED type, where body is optional.
     scheduled_details: Any = None
+    # The Functions trigger's own real, current representation. (AI-inferred)
     trigger: Any = None
     # One of different type of triggers. Currently only SCHEDULED is supported.
     type: Any = None

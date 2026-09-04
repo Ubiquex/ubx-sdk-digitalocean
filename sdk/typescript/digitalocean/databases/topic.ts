@@ -78,6 +78,7 @@ export interface TopicConfig {
 }
 
 export interface TopicAttrs {
+  /** The Kafka topic's own real, current representation. (AI-inferred) */
   topic: Topic_Topic;
   /** path parameter, not part of the API's own resource representation */
   databaseClusterUuid: string;

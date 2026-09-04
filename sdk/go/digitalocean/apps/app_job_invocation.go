@@ -42,15 +42,22 @@ type AppJobInvocationConfig struct {
 }
 
 type AppJobInvocationAttrs struct {
-	CompletedAt  any
-	CreatedAt    any
+	// A time value given in ISO8601 combined date and time format that represents when this job invocation completed. (AI-inferred)
+	CompletedAt any
+	// A time value given in ISO8601 combined date and time format that represents when this was created. (AI-inferred)
+	CreatedAt any
+	// The ID of the deployment this job invocation ran under. (AI-inferred)
 	DeploymentId any
-	Id           any
-	JobName      any
+	// A unique ID for this job invocation. (AI-inferred)
+	Id any
+	// The real name of the job component that was invoked. (AI-inferred)
+	JobName any
 	// The phase of the job invocation
-	Phase     any
+	Phase any
+	// A time value given in ISO8601 combined date and time format that represents when this job invocation started. (AI-inferred)
 	StartedAt any
-	Trigger   any
+	// The real event that triggered this job invocation. (AI-inferred)
+	Trigger any
 	// path parameter, not part of the API's own resource representation
 	AppId any
 	// path parameter, not part of the API's own resource representation

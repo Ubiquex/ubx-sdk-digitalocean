@@ -96,6 +96,7 @@ class VpcNatGatewayAttrs:
     type: Any = None
     # The UDP timeout in seconds for the VPC NAT gateway.
     udp_timeout_seconds: Any = None
+    # The VPC NAT gateway's own real, current representation. (AI-inferred)
     vpc_nat_gateway: Any = None
     # An array of VPCs associated with the VPC NAT gateway.
     vpcs: Any = None

@@ -28,6 +28,7 @@ type CheckConfig struct {
 }
 
 type CheckAttrs struct {
+	// The Uptime check's own real, current representation. (AI-inferred)
 	Check any
 	// A boolean value indicating whether the check is enabled/disabled.
 	Enabled any

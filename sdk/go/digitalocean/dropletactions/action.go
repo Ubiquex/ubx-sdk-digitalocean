@@ -44,6 +44,7 @@ type ActionConfig struct {
 }
 
 type ActionAttrs struct {
+	// The action's own real, current representation. (AI-inferred)
 	Action any
 	// path parameter, not part of the API's own resource representation
 	DropletId any

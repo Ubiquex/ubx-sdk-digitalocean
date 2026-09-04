@@ -44,7 +44,8 @@ type ProjectAttrs struct {
 	OwnerId any
 	// The unique universal identifier of the project owner.
 	OwnerUuid any
-	Project   any
+	// The project's own real, current representation. (AI-inferred)
+	Project any
 	// The purpose of the project. The maximum length is 255 characters. It can have one of the following values: - Just trying out DigitalOcean - Class project / Educational purposes - Website or blog - Web Application - Service or API - Mobile Application - Machine learning / AI / Data processing - IoT - Operational / Developer tooling If another value for purpose is specified, for example, "your custom purpose", your purpose will be stored as `Other: your custom purpose`.
 	Purpose any
 	// A time value given in ISO8601 combined date and time format that represents when the project was updated.

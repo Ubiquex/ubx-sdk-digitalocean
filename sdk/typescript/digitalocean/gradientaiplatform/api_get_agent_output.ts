@@ -588,7 +588,9 @@ export interface ApiGetAgentOutputConfig {
   knowledgeBaseUuid?: string[] | Computed<string[]>;
   /** MCP (Model Context Protocol) servers to attach to the agent */
   mcpServers?: ApiGetAgentOutput_Agent_McpServers[] | Computed<ApiGetAgentOutput_Agent_McpServers[]>;
+  /** The UUID of the model provider API key this agent uses. (AI-inferred) */
   modelProviderKeyUuid?: string | Computed<string>;
+  /** The UUID of the model router this agent uses, if configured to route rather than call one model directly. (AI-inferred) */
   modelRouterUuid?: string | Computed<string>;
   /** Identifier for the foundation model. */
   modelUuid?: string | Computed<string>;
@@ -598,12 +600,15 @@ export interface ApiGetAgentOutputConfig {
   openAiKeyUuid?: string | Computed<string>;
   /** The id of the DigitalOcean project this agent will belong to */
   projectId?: string | Computed<string>;
+  /** The real, configured reasoning effort level for models that support it. (AI-inferred) */
   reasoningEffort?: string | Computed<string>;
   /** The DigitalOcean region to deploy your agent in */
   region?: string | Computed<string>;
+  /** The real slug of the model router preset this agent was created from, if any. (AI-inferred) */
   routerPresetSlug?: string | Computed<string>;
   /** Agent tag to organize related resources */
   tags?: string[] | Computed<string[]>;
+  /** The real, configured token budget for extended model reasoning, for models that support it. (AI-inferred) */
   thinkingTokenBudget?: number | Computed<number>;
   /** Whether the agent can use the built-in web_fetch tool to retrieve content from public web pages. */
   webFetchEnabled?: boolean | Computed<boolean>;
@@ -628,7 +633,9 @@ export interface ApiGetAgentOutputAttrs {
   knowledgeBaseUuid: string[];
   /** MCP (Model Context Protocol) servers to attach to the agent */
   mcpServers: ApiGetAgentOutput_Agent_McpServers[];
+  /** The UUID of the model provider API key this agent uses. (AI-inferred) */
   modelProviderKeyUuid: string;
+  /** The UUID of the model router this agent uses, if configured to route rather than call one model directly. (AI-inferred) */
   modelRouterUuid: string;
   /** Identifier for the foundation model. */
   modelUuid: string;
@@ -638,12 +645,15 @@ export interface ApiGetAgentOutputAttrs {
   openAiKeyUuid: string;
   /** The id of the DigitalOcean project this agent will belong to */
   projectId: string;
+  /** The real, configured reasoning effort level for models that support it. (AI-inferred) */
   reasoningEffort: string;
   /** The DigitalOcean region to deploy your agent in */
   region: string;
+  /** The real slug of the model router preset this agent was created from, if any. (AI-inferred) */
   routerPresetSlug: string;
   /** Agent tag to organize related resources */
   tags: string[];
+  /** The real, configured token budget for extended model reasoning, for models that support it. (AI-inferred) */
   thinkingTokenBudget: number;
   /** Whether the agent can use the built-in web_fetch tool to retrieve content from public web pages. */
   webFetchEnabled: boolean;

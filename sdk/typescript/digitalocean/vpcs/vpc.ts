@@ -34,6 +34,7 @@ export interface VpcAttrs {
   name: string;
   /** The slug identifier for the region where the VPC will be created. */
   region: string;
+  /** The VPC's own real, current representation. (AI-inferred) */
   vpc: Vpc_Vpc;
   /** path parameter, not part of the API's own resource representation */
   vpcId: string;

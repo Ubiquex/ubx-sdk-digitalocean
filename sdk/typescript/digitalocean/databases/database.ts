@@ -212,15 +212,19 @@ export interface DatabaseConfig {
   /** Autoscaling configuration for the database cluster. Currently only supports storage autoscaling. If null, autoscaling is not configured for the cluster. */
   autoscale?: Database_Autoscale | Computed<Database_Autoscale>;
   backupRestore?: Database_BackupRestore | Computed<Database_BackupRestore>;
+  /** The real, public connection details (host, port, user, password) for this database cluster. (AI-inferred) */
   connection?: Database_Connection | Computed<Database_Connection>;
+  /** This database cluster's own, DigitalOcean-managed settings. (AI-inferred) */
   doSettings?: Database_Database_DoSettings | Computed<Database_Database_DoSettings>;
   /** A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, "valkey" for Valkey, "advanced_pg" for PostgreSQL Advanced Edition, and "advanced_mysql" for MySQL Advanced Edition. Advanced Edition engines are currently in public preview. */
   engine: string | Computed<string>;
+  /** This database cluster's own scheduled maintenance window (day and hour). (AI-inferred) */
   maintenanceWindow?: Database_Database_MaintenanceWindow | Computed<Database_Database_MaintenanceWindow>;
   /** A unique, human-readable name referring to a database cluster. */
   name: string | Computed<string>;
   /** The number of nodes in the database cluster. */
   numNodes: number | Computed<number>;
+  /** The real, private-network connection details (host, port, user, password) for this database cluster. (AI-inferred) */
   privateConnection?: Database_Connection | Computed<Database_Connection>;
   /** A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope. */
   privateNetworkUuid?: string | Computed<string>;
@@ -228,12 +232,15 @@ export interface DatabaseConfig {
   projectId?: string | Computed<string>;
   /** The slug identifier for the region where the database cluster is located. */
   region: string | Computed<string>;
+  /** This database cluster's own real firewall rules, restricting which sources may connect. (AI-inferred) */
   rules?: Database_Database_Rules[] | Computed<Database_Database_Rules[]>;
   /** The connection details for Schema Registry. */
   schemaRegistryConnection?: Database_Database_SchemaRegistryConnection | Computed<Database_Database_SchemaRegistryConnection>;
   /** The slug identifier representing the size of the nodes in the database cluster. */
   size: string | Computed<string>;
+  /** The real, public connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred) */
   standbyConnection?: Database_Connection | Computed<Database_Connection>;
+  /** The real, private-network connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred) */
   standbyPrivateConnection?: Database_Connection | Computed<Database_Connection>;
   /** Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage. */
   storageSizeMib?: number | Computed<number>;
@@ -251,17 +258,21 @@ export interface DatabaseAttrs {
   /** Autoscaling configuration for the database cluster. Currently only supports storage autoscaling. If null, autoscaling is not configured for the cluster. */
   autoscale: Database_Autoscale;
   backupRestore: Database_BackupRestore;
+  /** The real, public connection details (host, port, user, password) for this database cluster. (AI-inferred) */
   connection: Database_Connection;
   /** A time value given in ISO8601 combined date and time format that represents when the database cluster was created. */
   createdAt: string;
+  /** The logical database's own real, current representation. (AI-inferred) */
   database: Database_Database;
   /** An array of strings containing the names of databases created in the database cluster. */
   dbNames: string[];
+  /** This database cluster's own, DigitalOcean-managed settings. (AI-inferred) */
   doSettings: Database_Database_DoSettings;
   /** A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, "valkey" for Valkey, "advanced_pg" for PostgreSQL Advanced Edition, and "advanced_mysql" for MySQL Advanced Edition. Advanced Edition engines are currently in public preview. */
   engine: string;
   /** A unique ID that can be used to identify and reference a database cluster. */
   id: string;
+  /** This database cluster's own scheduled maintenance window (day and hour). (AI-inferred) */
   maintenanceWindow: Database_Database_MaintenanceWindow;
   /** Public hostname and port of the cluster's metrics endpoint(s). Includes one record for the cluster's primary node and a second entry for the cluster's standby node(s). */
   metricsEndpoints: Database_Database_MetricsEndpoints[];
@@ -269,6 +280,7 @@ export interface DatabaseAttrs {
   name: string;
   /** The number of nodes in the database cluster. */
   numNodes: number;
+  /** The real, private-network connection details (host, port, user, password) for this database cluster. (AI-inferred) */
   privateConnection: Database_Connection;
   /** A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope. */
   privateNetworkUuid: string;
@@ -276,6 +288,7 @@ export interface DatabaseAttrs {
   projectId: string;
   /** The slug identifier for the region where the database cluster is located. */
   region: string;
+  /** This database cluster's own real firewall rules, restricting which sources may connect. (AI-inferred) */
   rules: Database_Database_Rules[];
   /** The connection details for Schema Registry. */
   schemaRegistryConnection: Database_Database_SchemaRegistryConnection;
@@ -283,7 +296,9 @@ export interface DatabaseAttrs {
   semanticVersion: string;
   /** The slug identifier representing the size of the nodes in the database cluster. */
   size: string;
+  /** The real, public connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred) */
   standbyConnection: Database_Connection;
+  /** The real, private-network connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred) */
   standbyPrivateConnection: Database_Connection;
   /** A string representing the current status of the database cluster. */
   status: string;
@@ -293,6 +308,7 @@ export interface DatabaseAttrs {
   tags: string[];
   /** The connection details for OpenSearch dashboard. */
   uiConnection: Database_Database_SchemaRegistryConnection;
+  /** This database cluster's own real, provisioned database users. (AI-inferred) */
   users: Database_Database_Users[];
   /** A string representing the version of the database engine in use for the cluster. */
   version: string;

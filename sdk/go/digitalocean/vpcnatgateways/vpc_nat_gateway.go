@@ -92,7 +92,8 @@ type VpcNatGatewayAttrs struct {
 	Type any
 	// The UDP timeout in seconds for the VPC NAT gateway.
 	UdpTimeoutSeconds any
-	VpcNatGateway     any
+	// The VPC NAT gateway's own real, current representation. (AI-inferred)
+	VpcNatGateway any
 	// An array of VPCs associated with the VPC NAT gateway.
 	Vpcs any
 	// path parameter, not part of the API's own resource representation

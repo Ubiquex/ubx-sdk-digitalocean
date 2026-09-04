@@ -75,6 +75,7 @@ export interface ApiGetEvaluationRunOutputAttrs {
   agentDeploymentNames: string[];
   /** Agent UUIDs to run the test case against (legacy agents). */
   agentUuids: string[];
+  /** The evaluation run's own real, current representation. (AI-inferred) */
   evaluationRun: ApiGetEvaluationRunOutput_EvaluationRun;
   /** The name of the run. */
   runName: string;

@@ -71,7 +71,8 @@ type GetResponseAttrs struct {
 	PerformanceTier any
 	// The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides.
 	Region any
-	Share  any
+	// The NFS share's own real, current representation. (AI-inferred)
+	Share any
 	// The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50.
 	SizeGib any
 	// List of VPC IDs that should be able to access the share.

@@ -42,6 +42,7 @@ export interface ActionConfig {
 }
 
 export interface ActionAttrs {
+  /** The action's own real, current representation. (AI-inferred) */
   action: Action_Action;
   /** path parameter, not part of the API's own resource representation */
   dropletId: string;

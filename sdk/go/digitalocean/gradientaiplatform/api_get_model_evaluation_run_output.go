@@ -278,20 +278,24 @@ type ApiGetModelEvaluationRunOutputConfig struct {
 	// UUID of the candidate model to evaluate.
 	CandidateModelUuid any
 	// UUID of the dataset to use for evaluation.
-	DatasetUuid    any
+	DatasetUuid any
+	// The UUID of the evaluation preset this run was executed with, if any. (AI-inferred)
 	EvalPresetUuid any
 	// UUID of the judge model used to score responses.
 	JudgeModelUuid any
 	// UUIDs of metrics to evaluate (selected from ListModelEvaluationMetrics).
 	MetricUuids any
-	Name        any
-	PresetName  any
+	// A real, human-readable name for the evaluation run. (AI-inferred)
+	Name any
+	// The real name of the evaluation preset this run was executed with, if any. (AI-inferred)
+	PresetName any
 	// Which sections of this run's resolved configuration to persist as a reusable preset. Each selected section saves only its own fields; the remaining sections stay empty on the preset and must be supplied inline on future runs that reference it. Empty means do not save a preset (unless the deprecated `save_as_preset` boolean is true, in which case all sections are saved). Ignored when `eval_preset_uuid` is set. Use `preset_name` to label the saved preset.
 	PresetSaveSections any
 	// Deprecated: use `preset_save_sections`. When `true` and `preset_save_sections` is empty, all five sections of the resolved configuration are saved as a reusable preset (legacy behavior). Ignored when `eval_preset_uuid` is set.
 	SaveAsPreset any
 	// Source of the run creation (api, sdk, cli).
-	Source     any
+	Source any
+	// The real, primary metric highlighted for this run's own results. (AI-inferred)
 	StarMetric any
 	// path parameter, not part of the API's own resource representation
 	EvalRunUuid any
@@ -307,7 +311,8 @@ type ApiGetModelEvaluationRunOutputAttrs struct {
 	// UUID of the candidate model to evaluate.
 	CandidateModelUuid any
 	// UUID of the dataset to use for evaluation.
-	DatasetUuid    any
+	DatasetUuid any
+	// The UUID of the evaluation preset this run was executed with, if any. (AI-inferred)
 	EvalPresetUuid any
 	// UUID of the judge model used to score responses.
 	JudgeModelUuid any
@@ -317,8 +322,10 @@ type ApiGetModelEvaluationRunOutputAttrs struct {
 	Meta any
 	// UUIDs of metrics to evaluate (selected from ListModelEvaluationMetrics).
 	MetricUuids any
-	Name        any
-	PresetName  any
+	// A real, human-readable name for the evaluation run. (AI-inferred)
+	Name any
+	// The real name of the evaluation preset this run was executed with, if any. (AI-inferred)
+	PresetName any
 	// Which sections of this run's resolved configuration to persist as a reusable preset. Each selected section saves only its own fields; the remaining sections stay empty on the preset and must be supplied inline on future runs that reference it. Empty means do not save a preset (unless the deprecated `save_as_preset` boolean is true, in which case all sections are saved). Ignored when `eval_preset_uuid` is set. Use `preset_name` to label the saved preset.
 	PresetSaveSections any
 	// Paginated per-prompt evaluation results.
@@ -328,7 +335,8 @@ type ApiGetModelEvaluationRunOutputAttrs struct {
 	// Deprecated: use `preset_save_sections`. When `true` and `preset_save_sections` is empty, all five sections of the resolved configuration are saved as a reusable preset (legacy behavior). Ignored when `eval_preset_uuid` is set.
 	SaveAsPreset any
 	// Source of the run creation (api, sdk, cli).
-	Source     any
+	Source any
+	// The real, primary metric highlighted for this run's own results. (AI-inferred)
 	StarMetric any
 	// path parameter, not part of the API's own resource representation
 	EvalRunUuid any

@@ -245,6 +245,7 @@ export interface ApiGetKnowledgeBaseOutputConfig {
   region?: string | Computed<string>;
   /** Configuration for cross-encoder reranking during retrieval. */
   rerankingConfig?: ApiGetKnowledgeBaseOutput_KnowledgeBase_RerankingConfig | Computed<ApiGetKnowledgeBaseOutput_KnowledgeBase_RerankingConfig>;
+  /** The real, configured size of the knowledge base's own backing database. (AI-inferred) */
   size?: string | Computed<string>;
   /** Tags to organize your knowledge base. */
   tags?: string[] | Computed<string[]>;
@@ -257,6 +258,7 @@ export interface ApiGetKnowledgeBaseOutputConfig {
 export interface ApiGetKnowledgeBaseOutputAttrs {
   /** Identifier of the DigitalOcean OpenSearch database this knowledge base will use, optional. If not provided, we create a new database for the knowledge base in the same region as the knowledge base. */
   databaseId: string;
+  /** The real, current status of the knowledge base's own backing database. (AI-inferred) */
   databaseStatus: string;
   /** Optional data sources to attach at creation. Omit or use an empty list to create the knowledge base without sources, then add sources (with chunking strategy and sizes) using [Add a Data Source to a Knowledge Base](#operation/create_knowledge_base_data_source). When provided, see [Organize Data Sources](https://docs.digitalocean.com/products/gradient-ai-platform/how-to/create-manage-agent-knowledge-bases/#add-data-sources) for best practices. */
   datasources: ApiGetKnowledgeBaseOutput_Datasources[];
@@ -272,6 +274,7 @@ export interface ApiGetKnowledgeBaseOutputAttrs {
   region: string;
   /** Configuration for cross-encoder reranking during retrieval. */
   rerankingConfig: ApiGetKnowledgeBaseOutput_KnowledgeBase_RerankingConfig;
+  /** The real, configured size of the knowledge base's own backing database. (AI-inferred) */
   size: string;
   /** Tags to organize your knowledge base. */
   tags: string[];

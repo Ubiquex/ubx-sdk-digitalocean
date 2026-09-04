@@ -76,7 +76,8 @@ type ApiGetEvaluationRunOutputAttrs struct {
 	// Agent deployment names to run the test case against (ADK agent workspaces).
 	AgentDeploymentNames any
 	// Agent UUIDs to run the test case against (legacy agents).
-	AgentUuids    any
+	AgentUuids any
+	// The evaluation run's own real, current representation. (AI-inferred)
 	EvaluationRun any
 	// The name of the run.
 	RunName any

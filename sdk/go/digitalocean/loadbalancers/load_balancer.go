@@ -98,6 +98,7 @@ type LoadBalancerConfig struct {
 }
 
 type LoadBalancerAttrs struct {
+	// The Load Balancer's own real, current representation. (AI-inferred)
 	LoadBalancer any
 	// path parameter, not part of the API's own resource representation
 	LbId any

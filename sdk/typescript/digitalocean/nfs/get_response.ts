@@ -69,6 +69,7 @@ export interface GetResponseAttrs {
   performanceTier: string;
   /** The DigitalOcean region slug (e.g., nyc2, atl1) where the NFS share resides. */
   region: string;
+  /** The NFS share's own real, current representation. (AI-inferred) */
   share: GetResponse_Share;
   /** The desired/provisioned size of the share in GiB (Gibibytes). Must be >= 50. */
   sizeGib: number;

@@ -48,6 +48,7 @@ export interface FirewallConfig {
 }
 
 export interface FirewallAttrs {
+  /** The firewall's own real, current representation. (AI-inferred) */
   firewall: Firewall_Firewall;
   /** path parameter, not part of the API's own resource representation */
   firewallId: string;

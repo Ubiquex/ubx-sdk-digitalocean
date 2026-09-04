@@ -66,6 +66,7 @@ class AttachmentConfig:
     bgp: Any = None
     # Bandwidth (in Mbps) of the connection.
     connection_bandwidth_in_mbps: Any = None
+    # The real network-as-a-service provider this Partner Network Connect attachment connects through. (AI-inferred)
     naas_provider: Any = None
     # The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
     name: Any = None
@@ -86,6 +87,7 @@ class AttachmentAttrs:
     bgp: Any = None
     # Bandwidth (in Mbps) of the connection.
     connection_bandwidth_in_mbps: Any = None
+    # The real network-as-a-service provider this Partner Network Connect attachment connects through. (AI-inferred)
     naas_provider: Any = None
     # The name of the partner attachment. Must be unique and may only contain alphanumeric characters, dashes, and periods.
     name: Any = None

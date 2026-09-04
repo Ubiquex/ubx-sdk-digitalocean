@@ -68,6 +68,7 @@ var Destination_ConfigFields = ubx.FieldMap{
 }
 
 type DestinationConfig struct {
+	// The real, type-specific configuration for this sink destination. (AI-inferred)
 	Config any
 	// destination name
 	Name any
@@ -78,7 +79,9 @@ type DestinationConfig struct {
 }
 
 type DestinationAttrs struct {
-	Config      any
+	// The real, type-specific configuration for this sink destination. (AI-inferred)
+	Config any
+	// The sink destination's own real, current representation. (AI-inferred)
 	Destination any
 	// destination name
 	Name any

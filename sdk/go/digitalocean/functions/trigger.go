@@ -80,7 +80,8 @@ type TriggerAttrs struct {
 	Name any
 	// Trigger details for SCHEDULED type, where body is optional.
 	ScheduledDetails any
-	Trigger          any
+	// The Functions trigger's own real, current representation. (AI-inferred)
+	Trigger any
 	// One of different type of triggers. Currently only SCHEDULED is supported.
 	Type any
 	// path parameter, not part of the API's own resource representation

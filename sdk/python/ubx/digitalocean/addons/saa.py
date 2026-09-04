@@ -74,6 +74,7 @@ class SaaAttrs:
     name: Any = None
     # The slug identifier for the plan associated with the resource.
     plan_slug: Any = None
+    # The add-on association's own real, current representation. (AI-inferred)
     resource: Any = None
     # path parameter, not part of the API's own resource representation
     resource_uuid: Any = None

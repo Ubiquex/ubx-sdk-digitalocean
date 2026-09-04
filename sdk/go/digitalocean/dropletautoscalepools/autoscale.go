@@ -91,7 +91,8 @@ var Autoscale_AutoscalePool_DropletTemplateFields = ubx.FieldMap{
 
 type AutoscaleConfig struct {
 	// The scaling configuration for an autoscale pool, which is how the pool scales up and down (either by resource utilization or static configuration).
-	Config          any
+	Config any
+	// The real Droplet configuration new pool members are created from. (AI-inferred)
 	DropletTemplate any
 	// The human-readable name of the autoscale pool. This field cannot be updated
 	Name any
@@ -100,9 +101,11 @@ type AutoscaleConfig struct {
 }
 
 type AutoscaleAttrs struct {
+	// The autoscale pool's own real, current representation. (AI-inferred)
 	AutoscalePool any
 	// The scaling configuration for an autoscale pool, which is how the pool scales up and down (either by resource utilization or static configuration).
-	Config          any
+	Config any
+	// The real Droplet configuration new pool members are created from. (AI-inferred)
 	DropletTemplate any
 	// The human-readable name of the autoscale pool. This field cannot be updated
 	Name any

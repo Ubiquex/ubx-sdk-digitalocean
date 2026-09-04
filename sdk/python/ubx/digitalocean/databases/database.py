@@ -218,15 +218,19 @@ class DatabaseConfig:
     # Autoscaling configuration for the database cluster. Currently only supports storage autoscaling. If null, autoscaling is not configured for the cluster.
     autoscale: Any = None
     backup_restore: Any = None
+    # The real, public connection details (host, port, user, password) for this database cluster. (AI-inferred)
     connection: Any = None
+    # This database cluster's own, DigitalOcean-managed settings. (AI-inferred)
     do_settings: Any = None
     # A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, "valkey" for Valkey, "advanced_pg" for PostgreSQL Advanced Edition, and "advanced_mysql" for MySQL Advanced Edition. Advanced Edition engines are currently in public preview.
     engine: Any = None
+    # This database cluster's own scheduled maintenance window (day and hour). (AI-inferred)
     maintenance_window: Any = None
     # A unique, human-readable name referring to a database cluster.
     name: Any = None
     # The number of nodes in the database cluster.
     num_nodes: Any = None
+    # The real, private-network connection details (host, port, user, password) for this database cluster. (AI-inferred)
     private_connection: Any = None
     # A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
     private_network_uuid: Any = None
@@ -234,12 +238,15 @@ class DatabaseConfig:
     project_id: Any = None
     # The slug identifier for the region where the database cluster is located.
     region: Any = None
+    # This database cluster's own real firewall rules, restricting which sources may connect. (AI-inferred)
     rules: Any = None
     # The connection details for Schema Registry.
     schema_registry_connection: Any = None
     # The slug identifier representing the size of the nodes in the database cluster.
     size: Any = None
+    # The real, public connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred)
     standby_connection: Any = None
+    # The real, private-network connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred)
     standby_private_connection: Any = None
     # Additional storage added to the cluster, in MiB. If null, no additional storage is added to the cluster, beyond what is provided as a base amount from the 'size' and any previously added additional storage.
     storage_size_mib: Any = None
@@ -257,17 +264,21 @@ class DatabaseAttrs:
     # Autoscaling configuration for the database cluster. Currently only supports storage autoscaling. If null, autoscaling is not configured for the cluster.
     autoscale: Any = None
     backup_restore: Any = None
+    # The real, public connection details (host, port, user, password) for this database cluster. (AI-inferred)
     connection: Any = None
     # A time value given in ISO8601 combined date and time format that represents when the database cluster was created.
     created_at: Any = None
+    # The logical database's own real, current representation. (AI-inferred)
     database: Any = None
     # An array of strings containing the names of databases created in the database cluster.
     db_names: Any = None
+    # This database cluster's own, DigitalOcean-managed settings. (AI-inferred)
     do_settings: Any = None
     # A slug representing the database engine used for the cluster. The possible values are: "pg" for PostgreSQL, "mysql" for MySQL, "redis" for Caching, "mongodb" for MongoDB, "kafka" for Kafka, "opensearch" for OpenSearch, "valkey" for Valkey, "advanced_pg" for PostgreSQL Advanced Edition, and "advanced_mysql" for MySQL Advanced Edition. Advanced Edition engines are currently in public preview.
     engine: Any = None
     # A unique ID that can be used to identify and reference a database cluster.
     id: Any = None
+    # This database cluster's own scheduled maintenance window (day and hour). (AI-inferred)
     maintenance_window: Any = None
     # Public hostname and port of the cluster's metrics endpoint(s). Includes one record for the cluster's primary node and a second entry for the cluster's standby node(s).
     metrics_endpoints: Any = None
@@ -275,6 +286,7 @@ class DatabaseAttrs:
     name: Any = None
     # The number of nodes in the database cluster.
     num_nodes: Any = None
+    # The real, private-network connection details (host, port, user, password) for this database cluster. (AI-inferred)
     private_connection: Any = None
     # A string specifying the UUID of the VPC to which the database cluster will be assigned. If excluded, the cluster when creating a new database cluster, it will be assigned to your account's default VPC for the region. <br><br>Requires `vpc:read` scope.
     private_network_uuid: Any = None
@@ -282,6 +294,7 @@ class DatabaseAttrs:
     project_id: Any = None
     # The slug identifier for the region where the database cluster is located.
     region: Any = None
+    # This database cluster's own real firewall rules, restricting which sources may connect. (AI-inferred)
     rules: Any = None
     # The connection details for Schema Registry.
     schema_registry_connection: Any = None
@@ -289,7 +302,9 @@ class DatabaseAttrs:
     semantic_version: Any = None
     # The slug identifier representing the size of the nodes in the database cluster.
     size: Any = None
+    # The real, public connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred)
     standby_connection: Any = None
+    # The real, private-network connection details (host, port, user, password) for this database cluster's own standby node. (AI-inferred)
     standby_private_connection: Any = None
     # A string representing the current status of the database cluster.
     status: Any = None
@@ -299,6 +314,7 @@ class DatabaseAttrs:
     tags: Any = None
     # The connection details for OpenSearch dashboard.
     ui_connection: Any = None
+    # This database cluster's own real, provisioned database users. (AI-inferred)
     users: Any = None
     # A string representing the version of the database engine in use for the cluster.
     version: Any = None

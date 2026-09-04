@@ -162,6 +162,7 @@ type DropletConfig struct {
 }
 
 type DropletAttrs struct {
+	// The Droplet's own real, current representation. (AI-inferred)
 	Droplet any
 	// path parameter, not part of the API's own resource representation
 	DropletId any

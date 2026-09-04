@@ -123,6 +123,7 @@ class UserAttrs:
     # A string representing the database user's role. The value will be either "primary" or "normal".
     role: Any = None
     settings: Any = None
+    # The database user's own real, current representation. (AI-inferred)
     user: Any = None
     # path parameter, not part of the API's own resource representation
     database_cluster_uuid: Any = None

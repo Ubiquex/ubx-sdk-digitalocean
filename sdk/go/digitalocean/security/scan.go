@@ -37,6 +37,7 @@ type ScanConfig struct {
 }
 
 type ScanAttrs struct {
+	// The security scan's own real, current representation. (AI-inferred)
 	Scan any
 	// path parameter, not part of the API's own resource representation
 	ScanId any

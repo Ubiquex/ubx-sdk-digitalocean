@@ -68,6 +68,7 @@ export interface SaaAttrs {
   name: string;
   /** The slug identifier for the plan associated with the resource. */
   planSlug: string;
+  /** The add-on association's own real, current representation. (AI-inferred) */
   resource: Saa_Resource;
   /** path parameter, not part of the API's own resource representation */
   resourceUuid: string;

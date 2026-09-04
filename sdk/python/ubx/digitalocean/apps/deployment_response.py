@@ -428,6 +428,7 @@ class DeploymentResponse_Deployment:
 
 @dataclasses.dataclass
 class DeploymentResponseConfig:
+    # Whether to force a full rebuild rather than reusing a real, existing cached build. (AI-inferred)
     force_build: Any = None
     # path parameter, not part of the API's own resource representation
     app_id: Any = None
@@ -436,7 +437,9 @@ class DeploymentResponseConfig:
 
 @dataclasses.dataclass
 class DeploymentResponseAttrs:
+    # The deployment's own real, current representation. (AI-inferred)
     deployment: Any = None
+    # Whether to force a full rebuild rather than reusing a real, existing cached build. (AI-inferred)
     force_build: Any = None
     # path parameter, not part of the API's own resource representation
     app_id: Any = None

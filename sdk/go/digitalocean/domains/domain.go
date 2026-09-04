@@ -24,6 +24,7 @@ type DomainConfig struct {
 }
 
 type DomainAttrs struct {
+	// The domain's own real, current representation. (AI-inferred)
 	Domain any
 	// This optional attribute may contain an IP address. When provided, an A record will be automatically created pointing to the apex domain.
 	IpAddress any

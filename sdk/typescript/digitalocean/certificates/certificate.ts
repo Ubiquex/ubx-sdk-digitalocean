@@ -26,6 +26,7 @@ export interface CertificateConfig {
 }
 
 export interface CertificateAttrs {
+  /** The certificate's own real, current representation. (AI-inferred) */
   certificate: Certificate_Certificate;
   /** path parameter, not part of the API's own resource representation */
   certificateId: string;

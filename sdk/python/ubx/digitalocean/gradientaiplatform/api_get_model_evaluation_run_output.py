@@ -283,12 +283,15 @@ class ApiGetModelEvaluationRunOutputConfig:
     candidate_model_uuid: Any = None
     # UUID of the dataset to use for evaluation.
     dataset_uuid: Any = None
+    # The UUID of the evaluation preset this run was executed with, if any. (AI-inferred)
     eval_preset_uuid: Any = None
     # UUID of the judge model used to score responses.
     judge_model_uuid: Any = None
     # UUIDs of metrics to evaluate (selected from ListModelEvaluationMetrics).
     metric_uuids: Any = None
+    # A real, human-readable name for the evaluation run. (AI-inferred)
     name: Any = None
+    # The real name of the evaluation preset this run was executed with, if any. (AI-inferred)
     preset_name: Any = None
     # Which sections of this run's resolved configuration to persist as a reusable preset. Each selected section saves only its own fields; the remaining sections stay empty on the preset and must be supplied inline on future runs that reference it. Empty means do not save a preset (unless the deprecated `save_as_preset` boolean is true, in which case all sections are saved). Ignored when `eval_preset_uuid` is set. Use `preset_name` to label the saved preset.
     preset_save_sections: Any = None
@@ -296,6 +299,7 @@ class ApiGetModelEvaluationRunOutputConfig:
     save_as_preset: Any = None
     # Source of the run creation (api, sdk, cli).
     source: Any = None
+    # The real, primary metric highlighted for this run's own results. (AI-inferred)
     star_metric: Any = None
     # path parameter, not part of the API's own resource representation
     eval_run_uuid: Any = None
@@ -312,6 +316,7 @@ class ApiGetModelEvaluationRunOutputAttrs:
     candidate_model_uuid: Any = None
     # UUID of the dataset to use for evaluation.
     dataset_uuid: Any = None
+    # The UUID of the evaluation preset this run was executed with, if any. (AI-inferred)
     eval_preset_uuid: Any = None
     # UUID of the judge model used to score responses.
     judge_model_uuid: Any = None
@@ -321,7 +326,9 @@ class ApiGetModelEvaluationRunOutputAttrs:
     meta: Any = None
     # UUIDs of metrics to evaluate (selected from ListModelEvaluationMetrics).
     metric_uuids: Any = None
+    # A real, human-readable name for the evaluation run. (AI-inferred)
     name: Any = None
+    # The real name of the evaluation preset this run was executed with, if any. (AI-inferred)
     preset_name: Any = None
     # Which sections of this run's resolved configuration to persist as a reusable preset. Each selected section saves only its own fields; the remaining sections stay empty on the preset and must be supplied inline on future runs that reference it. Empty means do not save a preset (unless the deprecated `save_as_preset` boolean is true, in which case all sections are saved). Ignored when `eval_preset_uuid` is set. Use `preset_name` to label the saved preset.
     preset_save_sections: Any = None
@@ -333,6 +340,7 @@ class ApiGetModelEvaluationRunOutputAttrs:
     save_as_preset: Any = None
     # Source of the run creation (api, sdk, cli).
     source: Any = None
+    # The real, primary metric highlighted for this run's own results. (AI-inferred)
     star_metric: Any = None
     # path parameter, not part of the API's own resource representation
     eval_run_uuid: Any = None

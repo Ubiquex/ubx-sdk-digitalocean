@@ -34,6 +34,7 @@ class VolumeConfig:
 
 @dataclasses.dataclass
 class VolumeAttrs:
+    # The Block Storage volume's own real, current representation. (AI-inferred)
     volume: Any = None
     # path parameter, not part of the API's own resource representation
     volume_id: Any = None

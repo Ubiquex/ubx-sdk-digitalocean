@@ -55,6 +55,7 @@ class FirewallConfig:
 
 @dataclasses.dataclass
 class FirewallAttrs:
+    # The firewall's own real, current representation. (AI-inferred)
     firewall: Any = None
     # path parameter, not part of the API's own resource representation
     firewall_id: Any = None

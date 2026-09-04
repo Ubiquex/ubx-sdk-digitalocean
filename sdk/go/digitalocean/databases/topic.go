@@ -80,6 +80,7 @@ type TopicConfig struct {
 }
 
 type TopicAttrs struct {
+	// The Kafka topic's own real, current representation. (AI-inferred)
 	Topic any
 	// path parameter, not part of the API's own resource representation
 	DatabaseClusterUuid any

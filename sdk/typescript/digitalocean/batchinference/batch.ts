@@ -31,10 +31,13 @@ export interface BatchConfig {
 export interface BatchAttrs {
   /** Unique identifier for the batch job. */
   batchId: string;
+  /** A time value given in ISO8601 combined date and time format that represents when this batch job was cancelled, if it was. (AI-inferred) */
   cancelledAt: string;
+  /** A time value given in ISO8601 combined date and time format that represents when this batch job completed. (AI-inferred) */
   completedAt: string;
   /** Time window in which the job must complete. Jobs that do not finish in time transition to `expired`. */
   completionWindow: string;
+  /** A time value given in ISO8601 combined date and time format that represents when this batch job was created. (AI-inferred) */
   createdAt: string;
   /** Inference endpoint each request is dispatched to. **Required when `provider` is `openai` and must match the `url` on every JSONL line. Must be omitted when `provider` is `anthropic`.** */
   endpoint: string;
@@ -44,10 +47,13 @@ export interface BatchAttrs {
   errors: Batch_Errors[];
   /** Derived from `created_at` plus `completion_window`. */
   expiresAt: string;
+  /** A time value given in ISO8601 combined date and time format that represents when this batch job failed, if it did. (AI-inferred) */
   failedAt: string;
   /** The `file_id` returned by `POST /v1/batches/files`. */
   fileId: string;
+  /** A time value given in ISO8601 combined date and time format that represents when this batch job entered its finalizing state. (AI-inferred) */
   finalizingAt: string;
+  /** A time value given in ISO8601 combined date and time format that represents when this batch job began processing. (AI-inferred) */
   inProgressAt: string;
   /** The uploaded JSONL input file. */
   inputFileId: string;

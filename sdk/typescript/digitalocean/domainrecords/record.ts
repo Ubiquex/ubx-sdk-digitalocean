@@ -32,6 +32,7 @@ export interface RecordConfig {
 }
 
 export interface RecordAttrs {
+  /** The DNS record's own real, current representation. (AI-inferred) */
   domainRecord: Record_DomainRecord;
   /** path parameter, not part of the API's own resource representation */
   domainName: string;

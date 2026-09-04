@@ -41,29 +41,48 @@ const Alert_AlertsFields: FieldMap = {
 };
 
 export interface AlertConfig {
+  /** The real conditions that trigger this alert policy. (AI-inferred) */
   alerts: Alert_Alerts | Computed<Alert_Alerts>;
+  /** The real comparison operator (greater than or less than) used against the threshold value. (AI-inferred) */
   compare: string | Computed<string>;
+  /** A real, human-readable description of the alert policy. (AI-inferred) */
   description: string | Computed<string>;
+  /** Whether the alert policy is currently active. (AI-inferred) */
   enabled: boolean | Computed<boolean>;
+  /** The real IDs of the entities this alert policy monitors. (AI-inferred) */
   entities: string[] | Computed<string[]>;
+  /** The real tags this alert policy applies to, in addition to any explicitly listed entities. (AI-inferred) */
   tags: string[] | Computed<string[]>;
+  /** The real type of metric this alert policy monitors. (AI-inferred) */
   type: string | Computed<string>;
+  /** The real threshold value that triggers this alert. (AI-inferred) */
   value: number | Computed<number>;
+  /** The real time window the metric is evaluated over before triggering. (AI-inferred) */
   window: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
   alertUuid: string | Computed<string>;
 }
 
 export interface AlertAttrs {
+  /** The real conditions that trigger this alert policy. (AI-inferred) */
   alerts: Alert_Alerts;
+  /** The real comparison operator (greater than or less than) used against the threshold value. (AI-inferred) */
   compare: string;
+  /** A real, human-readable description of the alert policy. (AI-inferred) */
   description: string;
+  /** Whether the alert policy is currently active. (AI-inferred) */
   enabled: boolean;
+  /** The real IDs of the entities this alert policy monitors. (AI-inferred) */
   entities: string[];
+  /** The real, full alert policy configuration. (AI-inferred) */
   policy: Alert_Policy;
+  /** The real tags this alert policy applies to, in addition to any explicitly listed entities. (AI-inferred) */
   tags: string[];
+  /** The real type of metric this alert policy monitors. (AI-inferred) */
   type: string;
+  /** The real threshold value that triggers this alert. (AI-inferred) */
   value: number;
+  /** The real time window the metric is evaluated over before triggering. (AI-inferred) */
   window: string;
   /** path parameter, not part of the API's own resource representation */
   alertUuid: string;

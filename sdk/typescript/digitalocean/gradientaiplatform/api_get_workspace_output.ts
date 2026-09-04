@@ -461,6 +461,7 @@ export interface ApiGetWorkspaceOutputAttrs {
   description: string;
   /** Name of the workspace */
   name: string;
+  /** The workspace's own real, current representation. (AI-inferred) */
   workspace: ApiGetWorkspaceOutput_Workspace;
   /** path parameter, not part of the API's own resource representation */
   workspaceUuid: string;

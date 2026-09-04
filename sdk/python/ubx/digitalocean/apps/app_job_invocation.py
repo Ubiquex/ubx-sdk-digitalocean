@@ -46,14 +46,21 @@ class AppJobInvocationConfig:
 
 @dataclasses.dataclass
 class AppJobInvocationAttrs:
+    # A time value given in ISO8601 combined date and time format that represents when this job invocation completed. (AI-inferred)
     completed_at: Any = None
+    # A time value given in ISO8601 combined date and time format that represents when this was created. (AI-inferred)
     created_at: Any = None
+    # The ID of the deployment this job invocation ran under. (AI-inferred)
     deployment_id: Any = None
+    # A unique ID for this job invocation. (AI-inferred)
     id: Any = None
+    # The real name of the job component that was invoked. (AI-inferred)
     job_name: Any = None
     # The phase of the job invocation
     phase: Any = None
+    # A time value given in ISO8601 combined date and time format that represents when this job invocation started. (AI-inferred)
     started_at: Any = None
+    # The real event that triggered this job invocation. (AI-inferred)
     trigger: Any = None
     # path parameter, not part of the API's own resource representation
     app_id: Any = None

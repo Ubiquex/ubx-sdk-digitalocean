@@ -23,6 +23,7 @@ export interface VpcPeeringAttrs {
   name: string;
   /** An array of the two peered VPCs IDs. */
   vpcIds: string[];
+  /** The VPC peering connection's own real, current representation. (AI-inferred) */
   vpcPeering: VpcPeering_VpcPeering;
   /** path parameter, not part of the API's own resource representation */
   vpcPeeringId: string;

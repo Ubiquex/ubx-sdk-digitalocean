@@ -24,7 +24,8 @@ type VpcPeeringAttrs struct {
 	// The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
 	Name any
 	// An array of the two peered VPCs IDs.
-	VpcIds     any
+	VpcIds any
+	// The VPC peering connection's own real, current representation. (AI-inferred)
 	VpcPeering any
 	// path parameter, not part of the API's own resource representation
 	VpcPeeringId any

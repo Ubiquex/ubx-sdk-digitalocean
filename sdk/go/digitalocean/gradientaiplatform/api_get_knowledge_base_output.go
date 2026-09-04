@@ -247,7 +247,8 @@ type ApiGetKnowledgeBaseOutputConfig struct {
 	Region any
 	// Configuration for cross-encoder reranking during retrieval.
 	RerankingConfig any
-	Size            any
+	// The real, configured size of the knowledge base's own backing database. (AI-inferred)
+	Size any
 	// Tags to organize your knowledge base.
 	Tags any
 	// The VPC to deploy the knowledge base database in
@@ -258,7 +259,8 @@ type ApiGetKnowledgeBaseOutputConfig struct {
 
 type ApiGetKnowledgeBaseOutputAttrs struct {
 	// Identifier of the DigitalOcean OpenSearch database this knowledge base will use, optional. If not provided, we create a new database for the knowledge base in the same region as the knowledge base.
-	DatabaseId     any
+	DatabaseId any
+	// The real, current status of the knowledge base's own backing database. (AI-inferred)
 	DatabaseStatus any
 	// Optional data sources to attach at creation. Omit or use an empty list to create the knowledge base without sources, then add sources (with chunking strategy and sizes) using [Add a Data Source to a Knowledge Base](#operation/create_knowledge_base_data_source). When provided, see [Organize Data Sources](https://docs.digitalocean.com/products/gradient-ai-platform/how-to/create-manage-agent-knowledge-bases/#add-data-sources) for best practices.
 	Datasources any
@@ -274,7 +276,8 @@ type ApiGetKnowledgeBaseOutputAttrs struct {
 	Region any
 	// Configuration for cross-encoder reranking during retrieval.
 	RerankingConfig any
-	Size            any
+	// The real, configured size of the knowledge base's own backing database. (AI-inferred)
+	Size any
 	// Tags to organize your knowledge base.
 	Tags any
 	// The VPC to deploy the knowledge base database in

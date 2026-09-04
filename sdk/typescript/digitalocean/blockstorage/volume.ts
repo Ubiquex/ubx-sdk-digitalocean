@@ -28,6 +28,7 @@ export interface VolumeConfig {
 }
 
 export interface VolumeAttrs {
+  /** The Block Storage volume's own real, current representation. (AI-inferred) */
   volume: Volume_Volume;
   /** path parameter, not part of the API's own resource representation */
   volumeId: string;

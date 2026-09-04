@@ -16,6 +16,7 @@ export interface DbConfig {
 }
 
 export interface DbAttrs {
+  /** The Kafka schema's own real, current representation. (AI-inferred) */
   db: Db_Db;
   /** The name of the database. */
   name: string;

@@ -31,6 +31,7 @@ class RegistryAttrs:
     name: Any = None
     # Slug of the region where registry data is stored. When not provided, a region will be selected.
     region: Any = None
+    # The container registry's own real, current representation. (AI-inferred)
     registry: Any = None
     # The slug of the subscription tier to sign up for. Valid values can be retrieved using the options endpoint.
     subscription_tier_slug: Any = None

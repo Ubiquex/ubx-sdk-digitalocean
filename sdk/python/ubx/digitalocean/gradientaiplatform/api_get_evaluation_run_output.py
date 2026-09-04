@@ -81,6 +81,7 @@ class ApiGetEvaluationRunOutputAttrs:
     agent_deployment_names: Any = None
     # Agent UUIDs to run the test case against (legacy agents).
     agent_uuids: Any = None
+    # The evaluation run's own real, current representation. (AI-inferred)
     evaluation_run: Any = None
     # The name of the run.
     run_name: Any = None

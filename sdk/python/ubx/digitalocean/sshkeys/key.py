@@ -36,6 +36,7 @@ class KeyAttrs:
     name: Any = None
     # The entire public key string that was uploaded. Embedded into the root user's `authorized_keys` file if you include this key during Droplet creation.
     public_key: Any = None
+    # The SSH key's own real, current representation. (AI-inferred)
     ssh_key: Any = None
     # path parameter, not part of the API's own resource representation
     ssh_key_identifier: Any = None

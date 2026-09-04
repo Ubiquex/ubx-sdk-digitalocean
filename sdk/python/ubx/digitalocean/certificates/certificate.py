@@ -32,6 +32,7 @@ class CertificateConfig:
 
 @dataclasses.dataclass
 class CertificateAttrs:
+    # The certificate's own real, current representation. (AI-inferred)
     certificate: Any = None
     # path parameter, not part of the API's own resource representation
     certificate_id: Any = None

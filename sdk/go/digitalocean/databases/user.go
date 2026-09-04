@@ -119,7 +119,8 @@ type UserAttrs struct {
 	// A string representing the database user's role. The value will be either "primary" or "normal".
 	Role     any
 	Settings any
-	User     any
+	// The database user's own real, current representation. (AI-inferred)
+	User any
 	// path parameter, not part of the API's own resource representation
 	DatabaseClusterUuid any
 	// path parameter, not part of the API's own resource representation

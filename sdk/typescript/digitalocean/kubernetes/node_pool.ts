@@ -85,6 +85,7 @@ export interface NodePoolAttrs {
   minNodes: number;
   /** A human-readable name for the node pool. */
   name: string;
+  /** The node pool's own real, current representation. (AI-inferred) */
   nodePool: NodePool_NodePool;
   /** An object specifying the details of a specific worker node in a node pool. */
   nodes: NodePool_NodePool_Nodes[];
