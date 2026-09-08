@@ -9,7 +9,7 @@ SDK languages in one combined repo:
 
 - `sdk/go/` -- Go bindings, module `github.com/ubiquex/ubx-sdk-digitalocean/sdk/go`
   (a subdirectory Go module, tagged `sdk/go/vX.Y.Z`)
-- `sdk/typescript/` -- TypeScript bindings, published to JSR as `@ubx/sdk-digitalocean`
+- `sdk/typescript/` -- TypeScript bindings, published to npm as `@ubx/sdk-digitalocean`
 - `sdk/python/` -- Python bindings, published to PyPI as `ubx-sdk-digitalocean`
   (imported as `ubx.digitalocean.*`, a real PEP 420 namespace package)
 
@@ -53,7 +53,7 @@ record the way a directly-fetched, single-file provider's `VERSION` can.
 - Three independent registries, three independent version numbers per
   language -- never assume they agree. Verify each directly before trusting
   parity: Go module proxy (`proxy.golang.org` or `gh api
-  repos/Ubiquex/ubx-sdk-digitalocean/tags`), `jsr.io/@ubx/sdk-digitalocean`,
+  repos/Ubiquex/ubx-sdk-digitalocean/tags`), `npmjs.com/package/@ubx/sdk-digitalocean`,
   `pypi.org/project/ubx-sdk-digitalocean`. A commit to this repo's own
   `main` is NOT the same as "published" for any of the three -- verify
   against the SEPARATE published repo/registry directly, never infer

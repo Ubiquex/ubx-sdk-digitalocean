@@ -7,8 +7,8 @@ SDK languages in one combined repo:
 
 - [`sdk/go/`](sdk/go/) -- Go bindings, module `github.com/ubiquex/ubx-sdk-digitalocean/sdk/go`
   (a subdirectory Go module, tagged `sdk/go/vX.Y.Z`)
-- [`sdk/typescript/`](sdk/typescript/) -- TypeScript bindings, published to JSR as
-  [`@ubx/sdk-digitalocean`](https://jsr.io/@ubx/sdk-digitalocean)
+- [`sdk/typescript/`](sdk/typescript/) -- TypeScript bindings, published to npm as
+  [`@ubx/sdk-digitalocean`](https://www.npmjs.com/package/@ubx/sdk-digitalocean)
 - [`sdk/python/`](sdk/python/) -- Python bindings, published to PyPI as
   [`ubx-sdk-digitalocean`](https://pypi.org/project/ubx-sdk-digitalocean/)
   (imported as `ubx.digitalocean.*`, a real PEP 420 namespace package)
